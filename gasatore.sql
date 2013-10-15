@@ -47,6 +47,11 @@ CREATE TABLE donation_type (
   PRIMARY KEY (id)
 ) TYPE=INNODB;
 
+insert into donation_type(type) values 
+('ridotta'),
+('ordinaria'),
+('sostenitore');
+
 DROP TABLE IF EXISTS donation;
 CREATE TABLE donation (
   id int(10) unsigned NOT NULL auto_increment,
@@ -56,6 +61,21 @@ CREATE TABLE donation (
   PRIMARY KEY (id),
   FOREIGN KEY (type_id) references donation_type(id)
 ) TYPE=INNODB;
+
+insert into donation(name, type_id,amount) values 
+('primo trimestre',1,18),
+('secondo trimestre',1,18),
+('terzo trimestre',1,12),
+('quarto trimestre',1,18),
+('primo trimestre',2,27),
+('secondo trimestre',2,27),
+('terzo trimestre',2,18),
+('quarto trimestre',2,27),
+('primo trimestre',3,33),
+('secondo trimestre',3,33),
+('terzo trimestre',3,22),
+('quarto trimestre',3,33);
+
 /*
 Tabella quote				
 id	name  type	amount
@@ -74,6 +94,13 @@ CREATE TABLE calendar(
   ritiro int(1) default 1,
   PRIMARY KEY (id)
 ) TYPE=INNODB;
+
+insert into calendar (day,status,prenotazione, ritiro) values
+(now(), 'apertura',1,1),
+(date_add(now(),interval 7 day), 'apertura',1,1),
+( date_add(now(), interval 14 day), 'apertura',1,1),
+( date_add(now(), interval 21 day), 'apertura',1,1),
+( date_add(now(), interval 28 day), 'apertura',1,1);
 
 /* 
 Status	
@@ -133,7 +160,7 @@ CREATE TABLE user_role_lk (
 
 DROP TABLE IF EXISTS donation_paied;
 CREATE TABLE donation_paied (
-  id int(10) unsigned NOT NULL,
+  id int(10) unsigned NOT NULL auto_increment,
   user_id int(10) unsigned NOT NULL,
   donation_id int(10) unsigned NOT NULL,
   amount int(10) unsigned NOT NULL,
@@ -151,7 +178,7 @@ id	gaabista	quota	pagato
 
 DROP TABLE IF EXISTS product_category;
 CREATE TABLE product_category (
-  id int(10) unsigned NOT NULL,
+  id int(10) unsigned NOT NULL auto_increment,
   name varchar(50) default NULL,
   description varchar(100) default NULL,
   PRIMARY KEY (id)
@@ -159,7 +186,7 @@ CREATE TABLE product_category (
 	
 DROP TABLE IF EXISTS product;
 CREATE TABLE product (
-  id int(10) unsigned NOT NULL,
+  id int(10) unsigned NOT NULL auto_increment,
   name varchar(150) default NULL,
   category_id int(10) unsigned NOT NULL,
   price int(10) unsigned NOT NULL,
@@ -182,7 +209,7 @@ id	tipo	nome	 costo 	descrizione
 	
 DROP TABLE IF EXISTS booking;
 CREATE TABLE booking (
-  id int(10) unsigned NOT NULL,
+  id int(10) unsigned NOT NULL auto_increment,
   booking_date int(10) unsigned NOT NULL,
   user_id int(10) unsigned NOT NULL,
   pickup_date int(10) unsigned NOT NULL,
@@ -206,7 +233,7 @@ id	data ordine	utente	data ritiro	prodotto	quantità	tot (euro)
 	
 DROP TABLE IF EXISTS user_payment;
 CREATE TABLE user_payment (
-  id int(10) unsigned NOT NULL,
+  id int(10) unsigned NOT NULL auto_increment,
   user_id int(10) unsigned NOT NULL,
   date TIMESTAMP NOT NULL default CURRENT_TIMESTAMP,
   owed decimal(10,2) NOT NULL, 

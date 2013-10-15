@@ -28,14 +28,23 @@ $user2->newUser('username', 'password', 'Remo', 'Moro', 'tel', 'mobile', 'remo.m
 
 
 //add Product category
-$pcategory = new productCategory();
-$pcategory->newCategory($db, "pane", "Tutti i prodotti di pane");
+$pcategory = new productCategory($db);
+$pcategory->newCategory("pane", "Tutti i prodotti di pane");
 
-$cat2 = new productCategory();
-$cat2->newCategory($db, "uova", "Tutti i tipi di uova");
+$cat2 = new productCategory($db);
+$cat2->newCategory("uova", "Tutti i tipi di uova");
 
 $p = new Product($db);
 $p->newProduct('uova da 4', 'pacchetto di 4 uova', 2, "4.10");
+
+$p2 = new Product($db);
+$p2->newProduct('pane 4 cereali', 'pane 4 cereali', 2, "4.10");
+
+
+$roles = role::listRole($db);
+$userStatus = userStatus::listUserStatus($db);
+
+$listUser = User::listUser($db);
 
 //$user->loadInfo(null, $db);
 //echo var_dump($user);
