@@ -34,8 +34,8 @@ $pcategory->newCategory("pane", "Tutti i prodotti di pane");
 $cat2 = new productCategory($db);
 $cat2->newCategory("uova", "Tutti i tipi di uova");
 
-$p = new Product($db);
-$p->newProduct('uova da 4', 'pacchetto di 4 uova', 2, "4.10");
+$pr = new Product($db);
+$pr->newProduct('uova da 4', 'pacchetto di 4 uova', 2, "4.10");
 
 $p2 = new Product($db);
 $p2->newProduct('pane 4 cereali', 'pane 4 cereali', 2, "4.10");
@@ -46,6 +46,35 @@ $userStatus = userStatus::listUserStatus($db);
 
 $listUser = User::listUser($db);
 
+$products_list = array();
+$p['booking_date_id'] = 1;
+$p['user_id'] = 1;
+$p['pickup_date_id'] =2;
+$p['product_id'] = 1;
+$p['quantity'] = 2;
+$p['tot_price'] = 20;
+
+$products_list[] = $p;
+
+$p1['booking_date_id'] = 1;
+$p1['user_id'] = 1;
+$p1['pickup_date_id'] =2;
+$p1['product_id'] = 2;
+$p1['quantity'] = 3;
+$p1['tot_price'] = 30;
+
+$products_list[] = $p1;
+
+$u = new userBooking($db,null,null,null);
+$u->newBooking($products_list);
+$u->stampa();
+
+/*$booking = new booking($db);
+$booking->newBooking(1, 1, 2, 1,  2, 20);
+
+$bo2 = new  booking($db);
+$bo2->newBooking(1, 1, 2, 2, 3, 30);
+*/
 //$user->loadInfo(null, $db);
 //echo var_dump($user);
 //$log->LogDebug("User Count: $user");

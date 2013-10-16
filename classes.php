@@ -194,7 +194,7 @@ class donation extends base{
           foreach ($a as $k => $v) {
                 $this->id = $v['id'];
                 $this->name = $v['name'];
-                $this->type = new donationType($this->_db,$v['type']);
+                $this->type = new donationType($this->_db,$v['type_id']);
                 $this->amount = $v['amount'];
           }
 
@@ -396,7 +396,7 @@ class productCategory extends base{
 
 class Product extends base{ 
 
- private $id;
+ public $id;
  public $name;
  public $category; //another class for category
  public $price;
@@ -460,6 +460,191 @@ public function disable($disable){
  }
 
 }
+
+class booking extends base{
+
+ private $id;
+ public $booking_date_id;
+ public $user_id; 
+ public $pickup_date_id;
+ public $product_id;
+ public $quantity;
+ public $tot_price;
+
+
+ public function __construct($db, $id = null)  {
+        base::log( 'The class "'. __CLASS__. '" was initiated!');
+        $this->_db = $db;
+        if($id){$this->loadInfo($id);}
+ }
+
+ public function loadInfo($id){
+        // query database
+        if($id) {
+                $q = "SELECT * FROM booking where id=$id";
+                $a = $this->_db->fetch_all_array($q);
+
+                if (!empty($a)) {
+                  foreach ($a as $k => $v) {
+                        $this->id = $v['id'];
+                        $this->booking_date_id = $v['booking_date_id'];
+                        $this->user_id = $v['user_id'];
+                        $this->pickup_date_id = $v['pickup_date_id'];
+                        $this->product_id = $v['product_id'];
+                        $this->quantity = $v['quantity'];
+                        $this->tot_price = $v['tot_price'];
+                  }
+
+                }
+        }else{
+                return false;
+        }
+ }
+
+ public function newBooking($booking_date_id, $user_id, $pickup_date_id, $product_id, $quantity, $tot_price){
+ 
+	$q = sprintf("INSERT INTO booking (booking_date_id, user_id, pickup_date_id , product_id, quantity, tot_price) values ('%d', '%d', %d, %d, %d, %f)", 
+	$booking_date_id, $user_id, $pickup_date_id, $product_id, $quantity, $tot_price);
+
+        base::log("newBooking: $booking_date_id, $user_id, $pickup_date_id, $product_id, $quantity, $tot_price");
+        $this->_db->query($q);
+        $this->loadInfo($this->_db->last_id());
+ }
+
+ public function update($booking_date_id, $user_id, $pickup_date_id, $product_id, $tot_price ){
+	if(!$this->$id){
+	        $q = sprintf("update booking set booking_date_id=%d, user_id=%d, pickup_date_id=%d , product_id=%d, tot_price=%f where id=%d",
+	        $booking_date_id, $user_id, $pickup_date_id, $product_id, $tot_price, $this->id);
+	        base::log("updateBooking: $booking_date_id, $user_id, $pickup_date_id, $product_id, $tot_price");
+	        $this->_db->query($q);
+	        $this->loadInfo($this->_db->last_id());
+	}else{
+		return false;
+	}
+ }
+
+ public function disable($disable){
+        $q = sprintf("update product set disable='%d' where id=%d", $disable, $this->id);
+        base::log("Disable product $id");
+        $this->_db->query($q);
+        $this->disable = $disable;
+ }
+
+ public function __destructor (){
+        echo 'The class "', __CLASS__, '" was destroyed.';
+ }
+ 
+
+}
+
+
+
+class userBooking extends base{
+
+ public $booking_list; // a list of booking for the same user
+ public $user; // the user information
+ public $totalCost;
+
+ protected function clean(){
+	unset($booking_list);
+	unset($user);
+	unset( $totalCost);
+ }
+ 
+ public function __construct($db,$user_id, $booking_date_id, $pickup_date_id)  {
+        base::log( 'The class "'. __CLASS__. '" was initiated!');
+        $this->_db = $db;
+	if($user_id && ($booking_date_id || $pickup_date_id)){$this->loadInfo($user_id, $booking_date_id, $pickup_date_id);}
+ }
+
+ public function loadInfo($user_id, $booking_date_id, $pickup_date_id){
+       
+	$this->clean(); 
+	// query database
+	// tutte le prenotazioni fatte da un utente in una data precisa
+	// praticamente è come fare il filtro del foglio prenotazioni fissando la data di prenotazione e l'utente
+        if($user_id && $booking_date_id) {
+                $q = "SELECT user_id, b.id as b_id, b.tot_price as price
+		FROM user as u 
+		JOIN booking as b on b.user_id=u.id 
+		WHERE u.id=$id and b.booking_date_id=$booking_date_id";
+
+                $a = $this->_db->fetch_all_array($q);
+
+		$totalCost=0.0;
+                if (!empty($a)) {
+                  foreach ($a as $k => $v) {
+			if(!$this->user){ $this->user = new USer($this->_db, $v['user_id'] );}
+                        $this->booking_list[] = new booking($this->_db,$v['b_id']);
+			$totalCost += $v['price'];
+                  }
+
+                }
+	// tutte le prenotazioni fatte da un utente PER una data precisa
+	// praticamente è come fare il filtro del foglio prenotazioni fissando la data di ritiro e l'utente
+        }elseif($user_id && $pickup_date_id) {
+                $q = "SELECT user_id, b.id as b_id, b.tot_price as price
+                FROM user as u 
+                JOIN booking as b on b.user_id=u.id 
+                WHERE u.id=$id and b.pickup_date_id=$pickup_date_id";
+
+                $a = $this->_db->fetch_all_array($q);
+
+                $totalCost=0.0;
+                if (!empty($a)) {
+                  foreach ($a as $k => $v) {
+                        if(!$this->user){ $this->user = new USer($this->_db, $v['user_id'] );}
+                        $this->booking_list[] = new booking($this->_db,$v['b_id']);
+                        $totalCost += $v['price'];
+                  }
+
+                }
+ 
+                return false;
+        }
+ }
+
+ public function newBooking($booking_list){	
+	if($booking_list && count($booking_list)){
+		$this->clean(); 
+		foreach ( $booking_list as $b){
+			if(!$this->user){
+				$this->user = new User($this->_db, $b['user_id']);
+				$this->booking_list = $booking_list;
+				
+			}
+			$myBookingItem = new booking($this->_db);
+			$myBookingItem->newBooking($b['booking_date_id'], $b['user_id'], $b['pickup_date_id'], $b['product_id'], $b['quantity'], $b['tot_price']);
+		}		
+ 	}
+}
+
+ public function update($booking_date_id, $user_id, $pickup_date_id, $product_id, $quantity, $tot_price ){
+        if(!$this->$id){
+                $q = sprintf("update booking set booking_date_id=%d, user_id=%d, pickup_date_id=%d , product_id=%d, quantity=%d, tot_price=%f where id=%d",
+                $booking_date_id, $user_id, $pickup_date_id, $product_id, $quantity, $tot_price, $this->id);
+                base::log("updateBooking: $booking_date_id, $user_id, $pickup_date_id, $product_id, $quantity, $tot_price");
+                $this->_db->query($q);
+                $this->loadInfo($this->_db->last_id());
+        }else{
+                return false;
+        }
+ }
+
+ public function disable($disable){
+        $q = sprintf("update product set disable='%d' where id=%d", $disable, $this->id);
+        base::log("Disable product $id");
+        $this->_db->query($q);
+        $this->disable = $disable;
+ }
+
+ public function __destructor (){
+        echo 'The class "', __CLASS__, '" was destroyed.';
+ }
+ 
+
+}
+
 
 
 ?>

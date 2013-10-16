@@ -210,16 +210,16 @@ id	tipo	nome	 costo 	descrizione
 DROP TABLE IF EXISTS booking;
 CREATE TABLE booking (
   id int(10) unsigned NOT NULL auto_increment,
-  booking_date int(10) unsigned NOT NULL,
+  booking_date_id int(10) unsigned NOT NULL,
   user_id int(10) unsigned NOT NULL,
-  pickup_date int(10) unsigned NOT NULL,
+  pickup_date_id int(10) unsigned NOT NULL,
   product_id int(10) unsigned NOT NULL,
   quantity int(10) unsigned NOT NULL,
   tot_price int(10) unsigned NOT NULL,
   PRIMARY KEY (id),
-  FOREIGN KEY (booking_date) REFERENCES calendar (id),
+  FOREIGN KEY (booking_date_id) REFERENCES calendar (id),
   FOREIGN KEY (user_id) REFERENCES user (id),
-  FOREIGN KEY (pickup_date) REFERENCES calendar (id),
+  FOREIGN KEY (pickup_date_id) REFERENCES calendar (id),
   FOREIGN KEY (product_id) REFERENCES product (id)
   ) TYPE=INNODB;
 
