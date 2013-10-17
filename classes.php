@@ -300,6 +300,7 @@ class User extends base{
 
 	base::log("User: added user $name ");
 	if($this->_db->query($q)){
+		$this->loadInfo($this->_db->last_id());
 		return $this->_db->last_id();
 	}
 
@@ -503,12 +504,13 @@ class booking extends base{
 
  public function newBooking($booking_date_id, $user_id, $pickup_date_id, $product_id, $quantity, $tot_price){
  
-	$q = sprintf("INSERT INTO booking (booking_date_id, user_id, pickup_date_id , product_id, quantity, tot_price) values ('%d', '%d', %d, %d, %d, %f)", 
+	$q = sprintf("INSERT INTO booking (booking_date_id, user_id, pickup_date_id , product_id, quantity, tot_price) values (%d, %d, %d, %d, %d, %f)", 
 	$booking_date_id, $user_id, $pickup_date_id, $product_id, $quantity, $tot_price);
 
         base::log("newBooking: $booking_date_id, $user_id, $pickup_date_id, $product_id, $quantity, $tot_price");
         $this->_db->query($q);
         $this->loadInfo($this->_db->last_id());
+
  }
 
  public function update($booking_date_id, $user_id, $pickup_date_id, $product_id, $tot_price ){
@@ -551,7 +553,7 @@ class userBooking extends base{
 	unset( $totalCost);
  }
  
- public function __construct($db,$user_id, $booking_date_id, $pickup_date_id)  {
+ public function __construct($db,$user_id = null, $booking_date_id = null, $pickup_date_id = null)  {
         base::log( 'The class "'. __CLASS__. '" was initiated!');
         $this->_db = $db;
 	if($user_id && ($booking_date_id || $pickup_date_id)){$this->loadInfo($user_id, $booking_date_id, $pickup_date_id);}
@@ -571,12 +573,12 @@ class userBooking extends base{
 
                 $a = $this->_db->fetch_all_array($q);
 
-		$totalCost=0.0;
+		$this->totalCost=0.0;
                 if (!empty($a)) {
                   foreach ($a as $k => $v) {
 			if(!$this->user){ $this->user = new USer($this->_db, $v['user_id'] );}
                         $this->booking_list[] = new booking($this->_db,$v['b_id']);
-			$totalCost += $v['price'];
+			$this->totalCost += $v['price'];
                   }
 
                 }
@@ -590,12 +592,12 @@ class userBooking extends base{
 
                 $a = $this->_db->fetch_all_array($q);
 
-                $totalCost=0.0;
+                $this->totalCost=0.0;
                 if (!empty($a)) {
                   foreach ($a as $k => $v) {
                         if(!$this->user){ $this->user = new USer($this->_db, $v['user_id'] );}
                         $this->booking_list[] = new booking($this->_db,$v['b_id']);
-                        $totalCost += $v['price'];
+                        $this->totalCost += $v['price'];
                   }
 
                 }
@@ -604,17 +606,21 @@ class userBooking extends base{
         }
  }
 
- public function newBooking($booking_list){	
+ public function newUserBooking($booking_list){	
 	if($booking_list && count($booking_list)){
 		$this->clean(); 
+		
+                $this->totalCost=0.0;
 		foreach ( $booking_list as $b){
 			if(!$this->user){
 				$this->user = new User($this->_db, $b['user_id']);
-				$this->booking_list = $booking_list;
-				
 			}
 			$myBookingItem = new booking($this->_db);
 			$myBookingItem->newBooking($b['booking_date_id'], $b['user_id'], $b['pickup_date_id'], $b['product_id'], $b['quantity'], $b['tot_price']);
+			$this->booking_list[] = $myBookingItem;
+			
+		 	$this->totalCost += $b['tot_price'];
+
 		}		
  	}
 }
@@ -644,6 +650,79 @@ class userBooking extends base{
  
 
 }
+
+
+
+class userPayment extends base{
+
+ public $id;
+ public $user;
+ public $date;
+ public $owed;
+ public $payed;  
+ public $debit_credit;
+
+ public function __construct($db)  {
+        base::log( 'The class "'. __CLASS__. '" was initiated!');
+        $this->_db = $db;
+//        if($user_id && ($booking_date_id || $pickup_date_id)){$this->loadInfo($user_id, $booking_date_id, $pickup_date_id);}
+ }
+
+ public function loadInfo($id){
+       
+        // query database
+        if($id) {
+                $q = "SELECT * FROM user_payment WHERE id=$id";
+
+                $a = $this->_db->fetch_all_array($q);
+
+                if (!empty($a)) {
+                  foreach ($a as $k => $v) {
+                        $this->user = new User($v['user_id']);
+ 			$this->date = $v['date'];
+			$this->owed = $v['owed'];
+			$this->payed = $v['payed'];
+			$this->debit_credit = $v['debit_credit'];
+                  }
+
+                }
+        }else{ 
+                return false;
+        }
+ }
+
+ public function newPayment($user_id, $date, $owed, $payed, $debitCredit = null){
+ 
+	if(!$debitCredit){ $debitCredit = $payed - $owed;}
+	$q = sprintf("INSERT INTO user_payment (user_id, date, owed, payed, debit_credit) values (%d, '%s', %f, %f, %f)",
+        $user_id, $date, $owed, $payed, $debitCredit);
+
+        base::log("newPayment: $user_id, $date, $owed, $payed, $debitCredit");
+        $this->_db->query($q);
+        $this->loadInfo($this->_db->last_id());
+
+
+}
+
+ public function update($user_id, $date, $owed, $payed, $debitCredit){
+        if(!$this->$id){
+                $q = sprintf("update user_payment set user_id=%d, date='%s', owed=%f, payed=%f, debiti_credit=%f where id=%d",
+                $user_id, $date, $owed, $payed, $debitCredit, $this->id);
+                base::log("updatePayment: $user_id, $date, $owed, $payed, $debitCredit, ".$this->id);
+                $this->_db->query($q);
+                $this->loadInfo($this->_db->last_id());
+        }else{
+                return false;
+        }
+ }
+
+ public function __destructor (){
+        echo 'The class "', __CLASS__, '" was destroyed.';
+ }
+ 
+
+}
+
 
 
 

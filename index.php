@@ -25,8 +25,6 @@ $user->newUser('username', 'password', 'Cristina', 'Ananasso', 'tel', 'mobile', 
 $user2 = new User($db);
 $user2->newUser('username', 'password', 'Remo', 'Moro', 'tel', 'mobile', 'remo.moro@gmail.com', 'second email', 'address', 1002,0,1,1,1);
 
-
-
 //add Product category
 $pcategory = new productCategory($db);
 $pcategory->newCategory("pane", "Tutti i prodotti di pane");
@@ -65,9 +63,18 @@ $p1['tot_price'] = 30;
 
 $products_list[] = $p1;
 
-$u = new userBooking($db,null,null,null);
-$u->newBooking($products_list);
-$u->stampa();
+$uB = new userBooking($db);
+$uB->newUserBooking($products_list);
+$uB->stampa();
+
+echo "USER ID : $user->id\n";
+echo "USER2 ID : $user2->id\n";
+
+$tot_price = $uB->totalCost;
+echo "TOT PRICE: $tot_price\n";
+
+$payment = new userPayment($db);
+$payment->newPayment($user->id, '2013-10-10', "$tot_price", '55' );
 
 /*$booking = new booking($db);
 $booking->newBooking(1, 1, 2, 1,  2, 20);
