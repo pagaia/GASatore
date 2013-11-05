@@ -1,0 +1,543 @@
+2013-10-21 10:37:17 - ERROR --> An exception was thrown in ThisFunction() 
+2013-10-21 10:37:17 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-10-21 10:37:17 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:37:17 - DEBUG --> User: added user Cristina  
+2013-10-21 10:37:17 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:37:17 - DEBUG --> User: added user Remo  
+2013-10-21 10:37:17 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "Product" was initiated! 
+2013-10-21 10:37:17 - DEBUG --> newProduct: uova da 4, pacchetto di 4 uova, 2, 4.10, 1 
+2013-10-21 10:37:17 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "Product" was initiated! 
+2013-10-21 10:37:17 - DEBUG --> newProduct: pane 4 cereali, pane 4 cereali, 2, 4.10, 1 
+2013-10-21 10:37:17 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 10:37:17 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-10-21 10:37:17 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-10-21 10:37:17 - INFO  --> {"id":"1","status":"iscritto","description":null} 
+2013-10-21 10:37:17 - INFO  --> {"id":"2","status":"cancellato","description":null} 
+2013-10-21 10:37:17 - INFO  --> {"id":"3","status":"sospeso","description":null} 
+2013-10-21 10:37:17 - INFO  --> {"id":"4","status":"cancellato","description":null} 
+2013-10-21 10:37:17 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:37:17 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":null,"role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-21 10:37:17 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:37:17 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":null,"role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":null,"role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-21 10:37:17 - DEBUG --> The class "userBooking" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "booking" was initiated! 
+2013-10-21 10:37:17 - DEBUG --> newBooking: 1, 1, 2, 1, 2, 20 
+2013-10-21 10:37:17 - INFO  --> The class "booking" was initiated! 
+2013-10-21 10:37:17 - DEBUG --> newBooking: 1, 1, 2, 2, 3, 30 
+2013-10-21 10:37:17 - INFO  --> The class "userPayment" was initiated! 
+2013-10-21 10:37:17 - DEBUG --> newPayment: 1, 2013-10-10, 50, 55, 5 
+2013-10-21 10:37:17 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:37:17 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:53:55 - ERROR --> An exception was thrown in ThisFunction() 
+2013-10-21 10:53:55 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-10-21 10:53:55 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:53:55 - DEBUG --> User: added user Cristina  
+2013-10-21 10:53:55 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:53:55 - DEBUG --> User: added user Remo  
+2013-10-21 10:53:55 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "Product" was initiated! 
+2013-10-21 10:53:55 - DEBUG --> newProduct: uova da 4, pacchetto di 4 uova, 2, 4.10, 1 
+2013-10-21 10:53:55 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "Product" was initiated! 
+2013-10-21 10:53:55 - DEBUG --> newProduct: pane 4 cereali, pane 4 cereali, 2, 4.10, 1 
+2013-10-21 10:53:55 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 10:53:55 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-10-21 10:53:55 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-10-21 10:53:55 - INFO  --> {"id":"1","status":"iscritto","description":null} 
+2013-10-21 10:53:55 - INFO  --> {"id":"2","status":"cancellato","description":null} 
+2013-10-21 10:53:55 - INFO  --> {"id":"3","status":"sospeso","description":null} 
+2013-10-21 10:53:55 - INFO  --> {"id":"4","status":"cancellato","description":null} 
+2013-10-21 10:53:55 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:53:55 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":null,"role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-21 10:53:55 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:53:55 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":null,"role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":null,"role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-21 10:53:55 - DEBUG --> The class "userBooking" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "booking" was initiated! 
+2013-10-21 10:53:55 - DEBUG --> newBooking: 1, 1, 2, 1, 2, 20 
+2013-10-21 10:53:55 - INFO  --> The class "booking" was initiated! 
+2013-10-21 10:53:55 - DEBUG --> newBooking: 1, 1, 2, 2, 3, 30 
+2013-10-21 10:53:55 - INFO  --> The class "userPayment" was initiated! 
+2013-10-21 10:53:55 - DEBUG --> newPayment: 1, 2013-10-10, 50, 55, 5 
+2013-10-21 10:53:55 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:53:55 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:55:01 - ERROR --> An exception was thrown in ThisFunction() 
+2013-10-21 10:55:01 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-10-21 10:55:01 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:55:01 - DEBUG --> User: added user Cristina  
+2013-10-21 10:55:01 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:55:01 - DEBUG --> User: added user Remo  
+2013-10-21 10:55:01 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "Product" was initiated! 
+2013-10-21 10:55:01 - DEBUG --> newProduct: uova da 4, pacchetto di 4 uova, 2, 4.10, 1 
+2013-10-21 10:55:01 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "Product" was initiated! 
+2013-10-21 10:55:01 - DEBUG --> newProduct: pane 4 cereali, pane 4 cereali, 2, 4.10, 1 
+2013-10-21 10:55:01 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 10:55:01 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-10-21 10:55:01 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-10-21 10:55:01 - INFO  --> {"id":"1","status":"iscritto","description":null} 
+2013-10-21 10:55:01 - INFO  --> {"id":"2","status":"cancellato","description":null} 
+2013-10-21 10:55:01 - INFO  --> {"id":"3","status":"sospeso","description":null} 
+2013-10-21 10:55:01 - INFO  --> {"id":"4","status":"cancellato","description":null} 
+2013-10-21 10:55:01 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:55:01 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":null,"role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-21 10:55:01 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:55:01 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":null,"role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":null,"role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-21 10:55:01 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:55:01 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":null,"role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":null,"role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":null,"role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-21 10:55:01 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:55:01 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":null,"role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":null,"role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":null,"role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"4","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":null,"role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","name":"primo trimestre","type":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"amount":"18","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-21 10:55:01 - DEBUG --> The class "userBooking" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "role" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "booking" was initiated! 
+2013-10-21 10:55:01 - DEBUG --> newBooking: 1, 1, 2, 1, 2, 20 
+2013-10-21 10:55:01 - INFO  --> The class "booking" was initiated! 
+2013-10-21 10:55:01 - DEBUG --> newBooking: 1, 1, 2, 2, 3, 30 
+2013-10-21 10:55:01 - INFO  --> The class "userPayment" was initiated! 
+2013-10-21 10:55:01 - DEBUG --> newPayment: 3, 2013-10-10, 50, 55, 5 
+2013-10-21 10:55:01 - INFO  --> The class 'User' was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "userStatus" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "donationType" was initiated! 
+2013-10-21 10:55:01 - INFO  --> The class "role" was initiated! 
+2013-10-21 21:58:49 - ERROR --> An exception was thrown in ThisFunction() 
+2013-10-21 21:58:49 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-10-21 21:58:49 - INFO  --> The class 'User' was initiated! 
+2013-10-21 21:58:49 - DEBUG --> User: adding user cristina, cristina, Cristina, Ananasso, tel, mobile, cri.ananasso@hotmail.it, second email, address, 1001, 0, 1, 1,   
+2013-10-21 21:58:49 - INFO  --> The class 'User' was initiated! 
+2013-10-21 21:58:49 - DEBUG --> User: adding user rmoro, rmoro, Remo, Moro, tel, mobile, remo.moro@gmail.com, second email, address, 1002, 0, 1, 1,   
+2013-10-21 21:58:49 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 21:58:49 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 21:58:49 - INFO  --> The class "Product" was initiated! 
+2013-10-21 21:58:49 - DEBUG --> newProduct: uova da 4, pacchetto di 4 uova, 2, 4.10, 1 
+2013-10-21 21:58:49 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 21:58:49 - INFO  --> The class "Product" was initiated! 
+2013-10-21 21:58:49 - DEBUG --> newProduct: pane 4 cereali, pane 4 cereali, 2, 4.10, 1 
+2013-10-21 21:58:49 - INFO  --> The class "productCategory" was initiated! 
+2013-10-21 21:58:49 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-10-21 21:58:49 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-10-21 21:58:49 - INFO  --> [{"id":"1","status":"iscritto","description":null}] 
+2013-10-21 21:58:49 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"cancellato","description":null}] 
+2013-10-21 21:58:49 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"cancellato","description":null},{"id":"3","status":"sospeso","description":null}] 
+2013-10-21 21:58:49 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"cancellato","description":null},{"id":"3","status":"sospeso","description":null},{"id":"4","status":"cancellato","description":null}] 
+2013-10-21 21:58:49 - DEBUG --> The class "userBooking" was initiated! 
+2013-10-21 21:58:49 - INFO  --> The class 'User' was initiated! 
+2013-10-21 21:58:49 - INFO  --> The class "booking" was initiated! 
+2013-10-21 21:58:49 - DEBUG --> newBooking: 1, 1, 2, 1, 2, 20 
+2013-10-21 21:58:49 - INFO  --> The class "booking" was initiated! 
+2013-10-21 21:58:49 - DEBUG --> newBooking: 1, 1, 2, 2, 3, 30 
+2013-10-21 21:58:49 - INFO  --> The class "userPayment" was initiated! 
+2013-10-21 21:58:49 - DEBUG --> newPayment: , 2013-10-10, 50, 55, 5 
+2013-10-22 16:31:57 - ERROR --> An exception was thrown in ThisFunction() 
+2013-10-22 16:31:57 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-10-22 16:31:57 - INFO  --> The class 'User' was initiated! 
+2013-10-22 16:31:57 - DEBUG --> User: adding user cristina, cristina, Cristina, Ananasso, tel, mobile, cri.ananasso@hotmail.it, second email, address, 1001, 0, 1, 1, 2  
+2013-10-22 16:31:57 - DEBUG --> User: added user Cristina  
+2013-10-22 16:31:57 - INFO  --> The class "userStatus" was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "donationType" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-22 16:31:57 - INFO  --> The class "role" was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class 'User' was initiated! 
+2013-10-22 16:31:57 - DEBUG --> User: adding user rmoro, rmoro, Remo, Moro, tel, mobile, remo.moro@gmail.com, second email, address, 1002, 0, 1, 1, 1  
+2013-10-22 16:31:57 - DEBUG --> User: added user Remo  
+2013-10-22 16:31:57 - INFO  --> The class "userStatus" was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "donationType" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-22 16:31:57 - INFO  --> The class "role" was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "productCategory" was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "productCategory" was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "Product" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> newProduct: uova da 4, pacchetto di 4 uova, 2, 4.10, 1 
+2013-10-22 16:31:57 - INFO  --> The class "productCategory" was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "Product" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> newProduct: pane 4 cereali, pane 4 cereali, 2, 4.10, 1 
+2013-10-22 16:31:57 - INFO  --> The class "productCategory" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-10-22 16:31:57 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-10-22 16:31:57 - INFO  --> [{"id":"1","status":"iscritto","description":null}] 
+2013-10-22 16:31:57 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null}] 
+2013-10-22 16:31:57 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null},{"id":"3","status":"cancellato","description":null}] 
+2013-10-22 16:31:57 - INFO  --> The class 'User' was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "userStatus" was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "donationType" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-22 16:31:57 - INFO  --> The class "role" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-22","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-22 16:31:57 - INFO  --> The class 'User' was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "userStatus" was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "donationType" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-22 16:31:57 - INFO  --> The class "role" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-22","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-10-22","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-22 16:31:57 - DEBUG --> The class "userBooking" was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class 'User' was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "userStatus" was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "donationType" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-22 16:31:57 - INFO  --> The class "role" was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "booking" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> newBooking: 1, 1, 2, 1, 2, 20 
+2013-10-22 16:31:57 - INFO  --> The class "booking" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> newBooking: 1, 1, 2, 2, 3, 30 
+2013-10-22 16:31:57 - INFO  --> The class "userPayment" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> newPayment: 1, 2013-10-10, 50, 55, 5 
+2013-10-22 16:31:57 - INFO  --> The class 'User' was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "userStatus" was initiated! 
+2013-10-22 16:31:57 - INFO  --> The class "donationType" was initiated! 
+2013-10-22 16:31:57 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-22 16:31:57 - INFO  --> The class "role" was initiated! 
+2013-10-23 14:29:19 - ERROR --> An exception was thrown in ThisFunction() 
+2013-10-23 14:29:19 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-10-23 14:29:19 - INFO  --> The class 'User' was initiated! 
+2013-10-23 14:29:19 - DEBUG --> User: adding user cristina, cristina, Cristina, Ananasso, tel, mobile, cri.ananasso@hotmail.it, second email, address, 1001, 0, 1, 1, 2  
+2013-10-23 14:29:19 - DEBUG --> User: added user Cristina  
+2013-10-23 14:29:19 - INFO  --> The class "userStatus" was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "donationType" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-23 14:29:19 - INFO  --> The class "role" was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class 'User' was initiated! 
+2013-10-23 14:29:19 - DEBUG --> User: adding user rmoro, rmoro, Remo, Moro, tel, mobile, remo.moro@gmail.com, second email, address, 1002, 0, 1, 1, 1  
+2013-10-23 14:29:19 - DEBUG --> User: added user Remo  
+2013-10-23 14:29:19 - INFO  --> The class "userStatus" was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "donationType" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-23 14:29:19 - INFO  --> The class "role" was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "productCategory" was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "productCategory" was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "Product" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> newProduct: uova da 4, pacchetto di 4 uova, 2, 4,10, 1 
+2013-10-23 14:29:19 - INFO  --> The class "productCategory" was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "Product" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> newProduct: pane 4 cereali, pane 4 cereali, 2, 4,10, 1 
+2013-10-23 14:29:19 - INFO  --> The class "productCategory" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-10-23 14:29:19 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-10-23 14:29:19 - INFO  --> [{"id":"1","status":"iscritto","description":null}] 
+2013-10-23 14:29:19 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null}] 
+2013-10-23 14:29:19 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null},{"id":"3","status":"cancellato","description":null}] 
+2013-10-23 14:29:19 - INFO  --> The class 'User' was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "userStatus" was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "donationType" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-23 14:29:19 - INFO  --> The class "role" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-23","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-23 14:29:19 - INFO  --> The class 'User' was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "userStatus" was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "donationType" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-23 14:29:19 - INFO  --> The class "role" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-23","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-10-23","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-23 14:29:19 - DEBUG --> The class "userBooking" was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class 'User' was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "userStatus" was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "donationType" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-23 14:29:19 - INFO  --> The class "role" was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "booking" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> newBooking: 1, 1, 2, 1, 2, 20 
+2013-10-23 14:29:19 - INFO  --> The class "booking" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> newBooking: 1, 1, 2, 2, 3, 30 
+2013-10-23 14:29:19 - INFO  --> The class "userPayment" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> newPayment: 1, 2013-10-10, 50, 55, 5 
+2013-10-23 14:29:19 - INFO  --> The class 'User' was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "userStatus" was initiated! 
+2013-10-23 14:29:19 - INFO  --> The class "donationType" was initiated! 
+2013-10-23 14:29:19 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-23 14:29:19 - INFO  --> The class "role" was initiated! 
+2013-10-23 16:16:57 - ERROR --> An exception was thrown in ThisFunction() 
+2013-10-23 16:16:57 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-10-23 16:16:57 - INFO  --> The class 'User' was initiated! 
+2013-10-23 16:16:57 - DEBUG --> User: adding user cristina, cristina, Cristina, Ananasso, tel, mobile, cri.ananasso@hotmail.it, second email, address, 1001, 0, 1, 1, 2  
+2013-10-23 16:16:57 - DEBUG --> User: added user Cristina  
+2013-10-23 16:16:57 - INFO  --> The class "userStatus" was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "donationType" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-23 16:16:57 - INFO  --> The class "role" was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class 'User' was initiated! 
+2013-10-23 16:16:57 - DEBUG --> User: adding user rmoro, rmoro, Remo, Moro, tel, mobile, remo.moro@gmail.com, second email, address, 1002, 0, 1, 1, 1  
+2013-10-23 16:16:57 - DEBUG --> User: added user Remo  
+2013-10-23 16:16:57 - INFO  --> The class "userStatus" was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "donationType" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-23 16:16:57 - INFO  --> The class "role" was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "productCategory" was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "productCategory" was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "Product" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> newProduct: uova da 4, pacchetto di 4 uova, 2, 4,10, 0 
+2013-10-23 16:16:57 - INFO  --> The class "productCategory" was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "Product" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> newProduct: pane 4 cereali, pane 4 cereali, 2, 4,10, 0 
+2013-10-23 16:16:57 - INFO  --> The class "productCategory" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-10-23 16:16:57 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-10-23 16:16:57 - INFO  --> [{"id":"1","status":"iscritto","description":null}] 
+2013-10-23 16:16:57 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null}] 
+2013-10-23 16:16:57 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null},{"id":"3","status":"cancellato","description":null}] 
+2013-10-23 16:16:57 - INFO  --> The class 'User' was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "userStatus" was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "donationType" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-23 16:16:57 - INFO  --> The class "role" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-23","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-23 16:16:57 - INFO  --> The class 'User' was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "userStatus" was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "donationType" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-23 16:16:57 - INFO  --> The class "role" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-23","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-10-23","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-23 16:16:57 - DEBUG --> The class "userBooking" was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class 'User' was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "userStatus" was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "donationType" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-23 16:16:57 - INFO  --> The class "role" was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "booking" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> newBooking: 1, 1, 2, 1, 2, 20 
+2013-10-23 16:16:57 - INFO  --> The class "booking" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> newBooking: 1, 1, 2, 2, 3, 30 
+2013-10-23 16:16:57 - INFO  --> The class "userPayment" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> newPayment: 1, 2013-10-10, 50, 55, 5 
+2013-10-23 16:16:57 - INFO  --> The class 'User' was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "userStatus" was initiated! 
+2013-10-23 16:16:57 - INFO  --> The class "donationType" was initiated! 
+2013-10-23 16:16:57 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-23 16:16:57 - INFO  --> The class "role" was initiated! 
+2013-10-24 21:52:47 - ERROR --> An exception was thrown in ThisFunction() 
+2013-10-24 21:52:47 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-10-24 21:52:47 - INFO  --> The class 'User' was initiated! 
+2013-10-24 21:52:47 - DEBUG --> User: adding user cristina, cristina, Cristina, Ananasso, tel, mobile, cri.ananasso@hotmail.it, second email, address, 1001, 0, 1, 1, 2  
+2013-10-24 21:52:47 - DEBUG --> User: added user Cristina  
+2013-10-24 21:52:47 - INFO  --> The class "userStatus" was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "donationType" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-24 21:52:47 - INFO  --> The class "role" was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class 'User' was initiated! 
+2013-10-24 21:52:47 - DEBUG --> User: adding user rmoro, rmoro, Remo, Moro, tel, mobile, remo.moro@gmail.com, second email, address, 1002, 0, 1, 1, 1  
+2013-10-24 21:52:47 - DEBUG --> User: added user Remo  
+2013-10-24 21:52:47 - INFO  --> The class "userStatus" was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "donationType" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-24 21:52:47 - INFO  --> The class "role" was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "productCategory" was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "productCategory" was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "Product" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable) 
+	values ('uova da 4', 'pacchetto di 4 uova', 2, 4.000000, 0) 
+2013-10-24 21:52:47 - INFO  --> The class "productCategory" was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "Product" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable) 
+	values ('pane 4 cereali', 'pane 4 cereali', 2, 4.000000, 0) 
+2013-10-24 21:52:47 - INFO  --> The class "productCategory" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-10-24 21:52:47 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-10-24 21:52:47 - INFO  --> [{"id":"1","status":"iscritto","description":null}] 
+2013-10-24 21:52:47 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null}] 
+2013-10-24 21:52:47 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null},{"id":"3","status":"cancellato","description":null}] 
+2013-10-24 21:52:47 - INFO  --> The class 'User' was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "userStatus" was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "donationType" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-24 21:52:47 - INFO  --> The class "role" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-24","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-24 21:52:47 - INFO  --> The class 'User' was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "userStatus" was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "donationType" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-24 21:52:47 - INFO  --> The class "role" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-24","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-10-24","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-24 21:52:47 - DEBUG --> The class "userBooking" was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class 'User' was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "userStatus" was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "donationType" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-24 21:52:47 - INFO  --> The class "role" was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "booking" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> newBooking: 1, 1, 2, 1, 2, 20 
+2013-10-24 21:52:47 - INFO  --> The class "booking" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> newBooking: 1, 1, 2, 2, 3, 30 
+2013-10-24 21:52:47 - INFO  --> The class "userPayment" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> newPayment: 1, 2013-10-10, 50, 55, 5 
+2013-10-24 21:52:47 - INFO  --> The class 'User' was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "userStatus" was initiated! 
+2013-10-24 21:52:47 - INFO  --> The class "donationType" was initiated! 
+2013-10-24 21:52:47 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-24 21:52:47 - INFO  --> The class "role" was initiated! 
+2013-10-25 0:21:25 - ERROR --> An exception was thrown in ThisFunction() 
+2013-10-25 0:21:25 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-10-25 0:21:25 - INFO  --> The class 'User' was initiated! 
+2013-10-25 0:21:25 - DEBUG --> User: adding user cristina, cristina, Cristina, Ananasso, tel, mobile, cri.ananasso@hotmail.it, second email, address, 1001, 0, 1, 1, 2  
+2013-10-25 0:21:25 - DEBUG --> User: added user Cristina  
+2013-10-25 0:21:25 - INFO  --> The class "userStatus" was initiated! 
+2013-10-25 0:21:25 - INFO  --> The class "donationType" was initiated! 
+2013-10-25 0:21:25 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-25 0:21:25 - INFO  --> The class "role" was initiated! 
+2013-10-25 0:21:25 - INFO  --> The class 'User' was initiated! 
+2013-10-25 0:21:25 - DEBUG --> User: adding user rmoro, rmoro, Remo, Moro, tel, mobile, remo.moro@gmail.com, second email, address, 1002, 0, 1, 1, 1  
+2013-10-25 0:21:25 - DEBUG --> User: added user Remo  
+2013-10-25 0:21:25 - INFO  --> The class "userStatus" was initiated! 
+2013-10-25 0:21:25 - INFO  --> The class "donationType" was initiated! 
+2013-10-25 0:21:25 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-25 0:21:25 - INFO  --> The class "role" was initiated! 
+2013-10-25 0:21:25 - INFO  --> The class "productCategory" was initiated! 
+2013-10-25 0:21:25 - INFO  --> The class "productCategory" was initiated! 
+2013-10-25 0:21:25 - INFO  --> The class "Product" was initiated! 
+2013-10-25 0:21:25 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable) 
+	values ('uova da 4', 'pacchetto di 4 uova', 2, 4.000000, 0) 
+2013-10-25 0:21:25 - INFO  --> The class "productCategory" was initiated! 
+2013-10-25 0:21:25 - INFO  --> The class "Product" was initiated! 
+2013-10-25 0:21:25 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable) 
+	values ('pane 4 cereali', 'pane 4 cereali', 2, 4.000000, 0) 
+2013-10-25 0:21:25 - INFO  --> The class "productCategory" was initiated! 
+2013-10-25 0:21:25 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-10-25 0:21:25 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-10-25 0:21:25 - INFO  --> [{"id":"1","status":"iscritto","description":null}] 
+2013-10-25 0:21:25 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null}] 
+2013-10-25 0:21:25 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null},{"id":"3","status":"cancellato","description":null}] 
+2013-10-25 0:21:25 - INFO  --> The class 'User' was initiated! 
+2013-10-25 0:21:25 - INFO  --> The class "userStatus" was initiated! 
+2013-10-25 0:21:25 - INFO  --> The class "donationType" was initiated! 
+2013-10-25 0:21:25 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-25 0:21:25 - INFO  --> The class "role" was initiated! 
+2013-10-25 0:21:25 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-25","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-25 0:21:25 - INFO  --> The class 'User' was initiated! 
+2013-10-25 0:21:25 - INFO  --> The class "userStatus" was initiated! 
+2013-10-25 0:21:25 - INFO  --> The class "donationType" was initiated! 
+2013-10-25 0:21:25 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-25 0:21:25 - INFO  --> The class "role" was initiated! 
+2013-10-25 0:21:25 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-25","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-10-25","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-25 0:21:25 - DEBUG --> The class "userBooking" was initiated! 
+2013-10-25 0:23:11 - ERROR --> An exception was thrown in ThisFunction() 
+2013-10-25 0:23:11 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-10-25 0:23:11 - INFO  --> The class 'User' was initiated! 
+2013-10-25 0:23:11 - DEBUG --> User: adding user cristina, cristina, Cristina, Ananasso, tel, mobile, cri.ananasso@hotmail.it, second email, address, 1001, 0, 1, 1, 2  
+2013-10-25 0:23:11 - INFO  --> The class 'User' was initiated! 
+2013-10-25 0:23:11 - DEBUG --> User: adding user rmoro, rmoro, Remo, Moro, tel, mobile, remo.moro@gmail.com, second email, address, 1002, 0, 1, 1, 1  
+2013-10-25 0:23:11 - INFO  --> The class "productCategory" was initiated! 
+2013-10-25 0:23:11 - INFO  --> The class "productCategory" was initiated! 
+2013-10-25 0:23:11 - INFO  --> The class "Product" was initiated! 
+2013-10-25 0:23:11 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable) 
+	values ('uova da 4', 'pacchetto di 4 uova', 2, 4.000000, 0) 
+2013-10-25 0:23:11 - INFO  --> The class "Product" was initiated! 
+2013-10-25 0:23:11 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable) 
+	values ('pane 4 cereali', 'pane 4 cereali', 2, 4.000000, 0) 
+2013-10-25 0:23:11 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-10-25 0:23:11 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-10-25 0:23:11 - INFO  --> [{"id":"1","status":"iscritto","description":null}] 
+2013-10-25 0:23:11 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null}] 
+2013-10-25 0:23:11 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null},{"id":"3","status":"cancellato","description":null}] 
+2013-10-25 0:23:11 - INFO  --> The class 'User' was initiated! 
+2013-10-25 0:23:11 - INFO  --> The class "userStatus" was initiated! 
+2013-10-25 0:23:11 - INFO  --> The class "donationType" was initiated! 
+2013-10-25 0:23:11 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-25 0:23:11 - INFO  --> The class "role" was initiated! 
+2013-10-25 0:23:11 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-25","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-25 0:23:11 - INFO  --> The class 'User' was initiated! 
+2013-10-25 0:23:11 - INFO  --> The class "userStatus" was initiated! 
+2013-10-25 0:23:11 - INFO  --> The class "donationType" was initiated! 
+2013-10-25 0:23:11 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-25 0:23:11 - INFO  --> The class "role" was initiated! 
+2013-10-25 0:23:11 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-25","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-10-25","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-25 0:23:19 - ERROR --> An exception was thrown in ThisFunction() 
+2013-10-25 0:23:19 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-10-25 0:23:19 - INFO  --> The class 'User' was initiated! 
+2013-10-25 0:23:19 - DEBUG --> User: adding user cristina, cristina, Cristina, Ananasso, tel, mobile, cri.ananasso@hotmail.it, second email, address, 1001, 0, 1, 1, 2  
+2013-10-25 0:23:19 - DEBUG --> User: added user Cristina  
+2013-10-25 0:23:19 - INFO  --> The class "userStatus" was initiated! 
+2013-10-25 0:23:19 - INFO  --> The class "donationType" was initiated! 
+2013-10-25 0:23:19 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-25 0:23:19 - INFO  --> The class "role" was initiated! 
+2013-10-25 0:23:19 - INFO  --> The class 'User' was initiated! 
+2013-10-25 0:23:19 - DEBUG --> User: adding user rmoro, rmoro, Remo, Moro, tel, mobile, remo.moro@gmail.com, second email, address, 1002, 0, 1, 1, 1  
+2013-10-25 0:23:19 - DEBUG --> User: added user Remo  
+2013-10-25 0:23:19 - INFO  --> The class "userStatus" was initiated! 
+2013-10-25 0:23:19 - INFO  --> The class "donationType" was initiated! 
+2013-10-25 0:23:19 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-25 0:23:19 - INFO  --> The class "role" was initiated! 
+2013-10-25 0:23:19 - INFO  --> The class "productCategory" was initiated! 
+2013-10-25 0:23:19 - INFO  --> The class "productCategory" was initiated! 
+2013-10-25 0:23:19 - INFO  --> The class "Product" was initiated! 
+2013-10-25 0:23:19 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable) 
+	values ('uova da 4', 'pacchetto di 4 uova', 2, 4.000000, 0) 
+2013-10-25 0:23:19 - INFO  --> The class "productCategory" was initiated! 
+2013-10-25 0:23:19 - INFO  --> The class "Product" was initiated! 
+2013-10-25 0:23:19 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable) 
+	values ('pane 4 cereali', 'pane 4 cereali', 2, 4.000000, 0) 
+2013-10-25 0:23:19 - INFO  --> The class "productCategory" was initiated! 
+2013-10-25 0:23:19 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-10-25 0:23:19 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-10-25 0:23:19 - INFO  --> [{"id":"1","status":"iscritto","description":null}] 
+2013-10-25 0:23:19 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null}] 
+2013-10-25 0:23:19 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null},{"id":"3","status":"cancellato","description":null}] 
+2013-10-25 0:23:19 - INFO  --> The class 'User' was initiated! 
+2013-10-25 0:23:19 - INFO  --> The class "userStatus" was initiated! 
+2013-10-25 0:23:19 - INFO  --> The class "donationType" was initiated! 
+2013-10-25 0:23:19 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-25 0:23:19 - INFO  --> The class "role" was initiated! 
+2013-10-25 0:23:19 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-25","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-10-25 0:23:19 - INFO  --> The class 'User' was initiated! 
+2013-10-25 0:23:19 - INFO  --> The class "userStatus" was initiated! 
+2013-10-25 0:23:19 - INFO  --> The class "donationType" was initiated! 
+2013-10-25 0:23:19 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-10-25 0:23:19 - INFO  --> The class "role" was initiated! 
+2013-10-25 0:23:19 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-10-25","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-10-25","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 

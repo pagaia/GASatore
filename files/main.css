@@ -1,0 +1,298 @@
+body {
+	margin:0px;
+	padding:0px;
+	font-family:verdana, arial, helvetica, sans-serif;
+	color:#333;
+	background-color:white;
+	}
+h1 {
+	margin:0px 0px 15px 0px;
+	padding:1px;
+	font-size:24px;
+	line-height:6px;
+	font-weight:700;
+/*	color:#ccc;*/
+	color:#6698FF;
+	}
+
+h2, label {
+	color:#333;
+	font:14px verdana, arial, helvetica, sans-serif;
+	font-weight:700;
+}
+span  {
+        color:#333;
+        font:14px verdana, arial, helvetica, sans-serif;
+        font-weight:100;
+}
+
+
+#userinfo{
+        font:14px verdana, arial, helvetica, sans-serif;
+        font-weight:700;
+	float:right;
+	margin-right: 20px;
+  	}
+
+p {
+	font:14px/20px verdana, arial, helvetica, sans-serif;
+	margin:0px 0px 16px 0px;
+	padding:0px 0px 10px 0px;
+	}
+
+dd, dl{
+ font:14px/20px verdana, arial, helvetica, sans-serif;
+}
+
+#Content>p {margin:0px;}
+#Content>p+p {text-indent:30px;}
+
+a {
+	color:#09c;
+	font-size:12px;
+	text-decoration:none;
+	font-weight:600;
+	font-family:verdana, arial, helvetica, sans-serif;
+	}
+
+a:link {color:#09c;}
+a:visited {color:#07a;}
+a:hover {background-color:#F88017;}
+
+#Logo {
+        margin:0px 0px 10px 0px;
+        padding:17px 0px 0px 20px;
+	width:199px;
+	height: 82px;
+        }
+
+
+#Header {
+	margin:2px 0px 10px 0px;
+	padding:17px 0px 0px 20px;
+	/* For IE5/Win's benefit height = [correct height] + [top padding] + [top and bottom border widths] */
+	height:33px; /* 14px + 17px + 2px = 33px */
+	border-style:solid;
+	border-color:black;
+	border-width:1px 0px; /* top and bottom borders: 1px; left and right borders: 0px */
+	line-height:11px;
+	background-color:#eee;
+	height:14px; /* the correct height */
+	}
+/* I've heard this called the "be nice to Opera 5" rule. Basically, it feeds correct 
+length values to user agents that exhibit the parsing error exploited above yet get 
+the CSS box model right and understand the CSS2 parent-child selector. ALWAYS include
+a "be nice to Opera 5" rule every time you use the Tantek Celik hack (above). */
+body>#Header {height:14px;}
+
+#Content {
+  margin: 60px 50px 0px 250px;
+  padding:10px;
+  display: block; 
+  min-height:620px;
+	}
+
+#Menu {
+	position:absolute;
+	top:170px;
+	left:20px;
+	width:200px;
+	padding:5px 1px;
+	background-color:#eee;
+	border:1px dashed #999;
+	line-height:17px;
+	width:200px;
+	}
+/* Again, "be nice to Opera 5". */
+body>#Menu {width:200px;}
+
+#Error, .Error {
+        position: absolute;
+	top: 160px;
+	height: 30px;
+        left:250px;
+        padding:10px;
+	margin: 10px;
+        background-color: lightyellow;
+        border:1px dashed #999;
+        line-height:17px;
+	color: red;
+        font:14px verdana, arial, helvetica, sans-serif;
+        font-weight:700;
+        }
+
+select {
+margin-bottom:15px;
+}
+
+input[type=text]:focus {
+        background-color: lightyellow;
+        width: 200px;
+}
+input[type=text] {
+        width: 200px;
+}
+
+input.number {
+	width: 50px;
+}
+
+input.number:focus {
+        background-color: lightyellow;
+        width: 50px;
+}
+
+.tnumber, input.tnumber {
+        width: 100px;
+	text-align: right;
+}
+
+input.disabled {
+        color: black;
+}
+input.red {
+	color:red;
+}
+
+input.tnumber:focus {
+        background-color: lightyellow;
+        width: 100px;
+	text-align: right;
+}
+
+div.row span.header {
+  float: left;
+  width: 100px;
+  text-align: center;
+  padding-right: 10px;
+  font-weight:bold;
+}
+
+
+textarea:focus {
+        background-color: lightyellow;
+}
+
+/*
+input.email:focus {
+ 	background-color: lightyellow;
+        width: 200px;
+
+}
+
+input.email {
+        width: 200px;
+
+}
+*/
+table{
+    font: 12px verdana, arial, helvetica, sans-serif;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    border: 1px solid ;
+    /*width: 250px;*/
+}
+
+th {
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    border: 2px solid #FFFFFF;
+    background: #4a70aa;
+    color: #FFFFFF;
+}
+
+
+.white{
+ background: #FFF;
+}
+
+td {
+    text-align: center;
+    padding: 2px;
+    border: 2px solid #FFFFFF;
+    background: #e3f0f7;
+}
+
+
+.bold{
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    border: 2px solid #FFFFFF;
+    background: #4a70aa;
+    color: #FFFFFF;
+
+}
+
+/*select , label {
+	margin: 15px 4px;
+}
+*/
+div.row {
+  clear: both;
+  padding: 5px;
+}
+
+div.right{
+ 	position:absolute;
+        left:600px;
+}
+
+div.row label {
+  float: left;
+  width: 150px;
+  text-align: right;
+  padding-right: 10px;
+  font-weight:bold;
+}
+
+div.row span.formw {
+  width: 100px;
+  text-align: left;
+  } 
+
+#footer {
+   clear: both;
+   border-top: 1px solid ; 
+   width:100%;
+   height:50px;   /* Height of the footer */
+   background:#eee;
+   text-align: center;
+   padding: 10px;
+}
+
+#debug {
+ border: 1px solid red;
+ width:100%;
+ padding: 10px;
+}
+
+tr.temporary td, td.temporary{
+ background: orange;
+}
+
+tr.even td {
+ background: #C0C0C0;
+}
+
+pre {
+ background: #EE9A4D;
+ border: 1px solid;
+ padding: 5px;
+
+}
+
+.ncol {
+ width: 40px;
+}
+
+.vtext {
+ width: 100px;
+/* font-size:80%; 
+-webkit-transform:  rotate(-45deg);
+ -moz-transform:  rotate(-45deg);
+ -o-transform:  rotate(-45deg);
+ writing-mode: lr-tb;
+*/
+}

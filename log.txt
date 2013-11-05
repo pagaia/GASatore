@@ -1,0 +1,313 @@
+2013-11-05 1:02:16 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:02:16 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:02:16 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:02:16 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:02:16 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:02:16 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:02:16 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:02:16 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:02:16 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:02:16 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:02:16 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:02:16 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:02:16 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:02:16 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:02:16 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:02:16 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:02:16 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:02:19 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:02:19 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:02:19 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:02:19 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:02:19 - INFO  --> The class "role" was initiated! 
+2013-11-05 01:15:38 Logged in rmoro
+2013-11-05 01:15:38 SELECT  ut.id as user_id, ut.name, surname, r.id as role_id
+		FROM user as ut 
+		INNER JOIN role as r ON r.id=ut.role_id
+		WHERE ut.id=2 
+2013-11-05 1:15:40 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:15:40 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:15:40 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:15:40 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:15:40 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:15:40 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:15:40 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:15:40 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:15:40 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:15:40 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:15:40 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:40 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:15:40 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:15:40 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:15:40 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:15:40 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:15:40 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:41 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:15:41 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:15:41 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:15:41 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:15:41 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:15:41 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:41 - DEBUG --> Log ListCategory 
+2013-11-05 1:15:41 - DEBUG --> [{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:41 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:41 - DEBUG --> Log ListCategory 
+2013-11-05 1:15:41 - DEBUG --> [{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","name":"Prodotti vari","description":"Prodotti a prezzo variabile","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:41 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:41 - DEBUG --> Log ListCategory 
+2013-11-05 1:15:41 - DEBUG --> [{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","name":"Prodotti vari","description":"Prodotti a prezzo variabile","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:42 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:15:42 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:15:42 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:15:42 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:15:42 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:15:42 - DEBUG --> ListProducts: SELECT * FROM product  
+2013-11-05 1:15:42 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:15:42 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:42 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:42 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:15:42 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:42 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","name":"pane 4 cereali","category":{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pane 4 cereali","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:42 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:15:42 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:42 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","name":"pane 4 cereali","category":{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pane 4 cereali","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","name":"Carne","category":{"id":"3","name":"Prodotti vari","description":"Prodotti a prezzo variabile","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"1.00","disable":"0","description":"Carne di Maiale","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:15:43 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:15:43 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:15:43 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:15:43 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:15:43 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:15:43 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:15:43 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:15:43 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:15:43 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:15:43 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:43 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:43 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:43 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:43 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"4","day":"2013-11-25","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:43 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"4","day":"2013-11-25","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"5","day":"2013-12-02","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:43 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:43 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:43 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:43 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"4","day":"2013-11-25","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:43 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"4","day":"2013-11-25","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"5","day":"2013-12-02","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - DEBUG --> ListProducts: SELECT * FROM product WHERE disable=0 
+2013-11-05 1:15:43 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:15:43 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:43 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:15:43 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:43 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","name":"pane 4 cereali","category":{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pane 4 cereali","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:43 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:15:43 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:43 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","name":"pane 4 cereali","category":{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pane 4 cereali","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","name":"Carne","category":{"id":"3","name":"Prodotti vari","description":"Prodotti a prezzo variabile","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"1.00","disable":"0","description":"Carne di Maiale","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:44 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:15:44 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:15:44 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:15:44 - DEBUG --> ListProducts: SELECT * FROM product  
+2013-11-05 1:15:44 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:44 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:44 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:44 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","name":"pane 4 cereali","category":{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pane 4 cereali","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:44 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:44 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","name":"pane 4 cereali","category":{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pane 4 cereali","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","name":"Carne","category":{"id":"3","name":"Prodotti vari","description":"Prodotti a prezzo variabile","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"1.00","disable":"0","description":"Carne di Maiale","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:15:44 - DEBUG --> ListBooking: SELECT * FROM booking  GROUP BY user_id, booking_date_id, pickup_date_id ORDER by booking_date_id, pickup_date_id,user_id 
+2013-11-05 1:15:44 - DEBUG --> The class "userBooking" was initiated! 
+2013-11-05 1:15:44 - DEBUG --> UserBooking loadInfo: SELECT user_id, b.id as b_id, b.tot_price as price
+		FROM user as u 
+		JOIN booking as b on b.user_id=u.id 
+		WHERE u.id=1 and b.booking_date_id=1 
+2013-11-05 1:15:44 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:15:44 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:15:44 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "booking" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:15:44 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:15:44 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "booking" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:15:44 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:15:44 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "booking" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:15:44 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:15:44 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:15:44 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:15:44 - DEBUG --> [{"booking_list":[{"booking_date_id":{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"user_id":{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"pickup_date_id":{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"product_id":{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"quantity":"1.00","tot_price":"4.00","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"booking_date_id":{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"user_id":{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"pickup_date_id":{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"product_id":{"id":"2","name":"pane 4 cereali","category":{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pane 4 cereali","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"quantity":"2.00","tot_price":"8.00","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"booking_date_id":{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"user_id":{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"pickup_date_id":{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"product_id":{"id":"3","name":"Carne","category":{"id":"3","name":"Prodotti vari","description":"Prodotti a prezzo variabile","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"1.00","disable":"0","description":"Carne di Maiale","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"quantity":"1.00","tot_price":"1.00","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}],"user":{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"totalCost":13,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:03 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:16:03 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:16:03 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:16:03 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:16:03 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:16:03 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:16:03 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:16:03 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:16:03 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:16:03 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:16:03 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:03 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:16:03 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:16:03 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:16:03 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:16:03 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:16:03 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:17 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:16:17 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:16:17 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:16:17 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:16:17 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:16:17 - DEBUG --> ListProducts: SELECT * FROM product  
+2013-11-05 1:16:17 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:16:17 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:16:17 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:17 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:16:17 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:16:17 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","name":"pane 4 cereali","category":{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pane 4 cereali","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:17 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:16:17 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:16:17 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","name":"pane 4 cereali","category":{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pane 4 cereali","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","name":"Carne","category":{"id":"3","name":"Prodotti vari","description":"Prodotti a prezzo variabile","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"1.00","disable":"0","description":"Carne di Maiale","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 01:16:34 Logged in cristina
+2013-11-05 01:16:34 SELECT  ut.id as user_id, ut.name, surname, r.id as role_id
+		FROM user as ut 
+		INNER JOIN role as r ON r.id=ut.role_id
+		WHERE ut.id=1 
+2013-11-05 1:16:39 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:16:39 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:16:39 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:16:39 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:16:39 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:16:41 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:16:41 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:16:41 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:16:41 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:16:41 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:16:44 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:16:44 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:16:44 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:16:44 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:16:44 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:16:45 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:16:45 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:16:45 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:16:45 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:16:45 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:16:45 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:16:45 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:16:45 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:16:45 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:16:45 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:16:45 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:45 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:45 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:45 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:45 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"4","day":"2013-11-25","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:45 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"4","day":"2013-11-25","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"5","day":"2013-12-02","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:45 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:45 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:45 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:45 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"4","day":"2013-11-25","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:45 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"4","day":"2013-11-25","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"5","day":"2013-12-02","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - DEBUG --> ListProducts: SELECT * FROM product WHERE disable=0 
+2013-11-05 1:16:45 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:16:45 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:16:45 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:16:45 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:16:45 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","name":"pane 4 cereali","category":{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pane 4 cereali","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:45 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:16:45 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:16:45 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","name":"pane 4 cereali","category":{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pane 4 cereali","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","name":"Carne","category":{"id":"3","name":"Prodotti vari","description":"Prodotti a prezzo variabile","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"1.00","disable":"0","description":"Carne di Maiale","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:49 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:16:49 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:16:49 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:16:49 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:16:49 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:16:51 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:16:51 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:16:51 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:16:51 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:16:51 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:16:51 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - INFO  --> The class 'User' was initiated! 
+2013-11-05 1:16:51 - INFO  --> The class "userStatus" was initiated! 
+2013-11-05 1:16:51 - INFO  --> The class "donationType" was initiated! 
+2013-11-05 1:16:51 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-05 1:16:51 - INFO  --> The class "role" was initiated! 
+2013-11-05 1:16:51 - DEBUG --> [{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Ananasso","tel":"tel","mobile":"mobile","email":"cri.ananasso@hotmail.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@gmail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-05","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:51 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:51 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:51 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:51 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"4","day":"2013-11-25","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:51 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"4","day":"2013-11-25","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"5","day":"2013-12-02","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:51 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:51 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:51 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:51 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"4","day":"2013-11-25","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - INFO  --> The class "calendar" was initiated! 
+2013-11-05 1:16:51 - INFO  --> [{"id":"1","day":"2013-11-04","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","day":"2013-11-11","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","day":"2013-11-18","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"4","day":"2013-11-25","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"5","day":"2013-12-02","status":"apertura","booking":"1","pickup":"1","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - DEBUG --> ListProducts: SELECT * FROM product WHERE disable=0 
+2013-11-05 1:16:51 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:16:51 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:16:51 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:16:51 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:16:51 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","name":"pane 4 cereali","category":{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pane 4 cereali","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-05 1:16:51 - INFO  --> The class "Product" was initiated! 
+2013-11-05 1:16:51 - INFO  --> The class "productCategory" was initiated! 
+2013-11-05 1:16:51 - DEBUG --> [{"id":"1","name":"uova da 4","category":{"id":"2","name":"uova","description":"Tutti i tipi di uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pacchetto di 4 uova","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","name":"pane 4 cereali","category":{"id":"1","name":"pane","description":"Tutti i prodotti di pane","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"4.00","disable":"0","description":"pane 4 cereali","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","name":"Carne","category":{"id":"3","name":"Prodotti vari","description":"Prodotti a prezzo variabile","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"price":"1.00","disable":"0","description":"Carne di Maiale","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 

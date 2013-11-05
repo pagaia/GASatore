@@ -1,0 +1,89 @@
+
+	FP7 Projects Effort and Cost Report - Help
+
+   1 Description
+   2 Explanation of the pages/functions
+   3 Changelog
+   4 Installation
+   5 License
+
+1 Description
+
+	This tool lets the people of different companies who work together for a common project 
+	to load the information about effort and cost spent for the project. 
+	At the moment this tool lets save just the info about the total company. 
+	In some next release it should be possible to insert information about the single person.
+
+2 Explanation of the pages/functions
+
+	Select Project:
+	    - The first page through which the user can select the corresponding project in order to load the effort and cost report
+	Monthly Report
+	    - This page lets the user to load the effort report only for a single month
+	Show M. Report
+	    - This page shows all the monthly reports loaded for the project selected
+	Six-Monthly Report
+	    - This page lets the user to load the effort and cost report referencing to the six montly just passed
+	Show SM Report
+	    - This page shows all the report inserted for relative sixmonthly report
+	Export Report
+	    - This function allows to export the effort and cost report in Excel file. 
+		Simple users can export only the info about their company. 
+		The administrator is able to export all information of all companies about the selected project.
+	Change Password
+	    - As named, this page lets the user to change his password
+	Audit
+	    - This page is available only for the Administrator and lets to know who user has inserted the report and When
+	Logout
+	    - Function for log out
+
+
+3 Changelog
+ 	Version 1.7
+            - added users table for sending emails on sendemail page
+	Version 1.6
+	    - added sendemail page
+	    - some little change for debug
+	Version 1.5:
+	    - different effort accounting: hours and months
+  	    - effort fields on Cost table are now readonly
+	    - user's name is always present, for security
+            - some style changes 
+	Version 1.4:
+	    - logging page was added to see Who inserts What
+	Version 1.3
+	    - the footer was added with contact email
+	    - the change password page was added
+	Version 1.2
+	    - It was unified the page for complete export. 
+		Simple users can export only the info about their company. 
+		The administrator is able to extract all information.
+	Version 1.1
+	    - the show report page was added for monthly and six-monthly report
+	    - the link was added for export the monthly and six-monthly report in Excel format
+	Version 1.0
+	    - first version of the tool
+	    - session management: user and password
+	    - insert page for monthly and six-monthly report
+	    - logout page
+	
+
+4 Installation
+
+	The installation is straightforward.
+	
+	Requirements:
+	    - mysql 5.x
+	    - php 5.x
+	    - apache 2.x
+	
+	Unzip the package into the html apache directory, create a user and database on mysql ( i.e. user: effort, database: effort). 
+	Then launch the command to create the tables into the database (i.e. mysql -u "user" -p "databaase-name" < time.effort.sql ) 
+	Change the paramenters into the file config.php. Some data are available as example into the database. 
+	Change the file time.effort.sql in order to address your needs. 
+	That's all!
+	
+
+5 License
+
+	This tool is licensed with Creative Commons by-sa 3.0 For more information refers to the page Creative Commons by-sa 3.0 

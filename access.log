@@ -1,0 +1,170 @@
+2012-01-26 14:17:56 Logged in rmoro
+2012-01-26 14:17:56 SELECT  ut.id as user_id, ut.name, surname, ct.id as company_id, ct.name as company_name, ct.short as company_short, r.id as role_id
+		FROM user as ut 
+		INNER JOIN company as ct ON ut.company_id=ct.id 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=1 
+getUsersByProject: SELECT user.id, user.name, user.surname, email, c.short
+FROM user JOIN project_user_lk lk on lk.user_id=user.id 
+JOIN project p on p.id=lk.project_id 
+JOIN company c on c.id=user.company_id
+WHERE lk.project_id=1 
+2012-02-01 09:42:39 Logged FAIL rmoro
+2012-02-01 09:42:52 Logged in rmoro
+2012-02-01 09:42:52 SELECT  ut.id as user_id, ut.name, surname, ct.id as company_id, ct.name as company_name, ct.short as company_short, r.id as role_id
+		FROM user as ut 
+		INNER JOIN company as ct ON ut.company_id=ct.id 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=1 
+2012-02-01 10:04:56 Logged in rmoro
+2012-02-01 10:04:56 SELECT  ut.id as user_id, ut.name, surname, ct.id as company_id, ct.name as company_name, ct.short as company_short, r.id as role_id
+		FROM user as ut 
+		INNER JOIN company as ct ON ut.company_id=ct.id 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=1 
+Audit: INSERT INTO audit(user_id, period_id, tstamp, operation )
+                            values (1,1, NOW(), 'INSERT') 
+2012-02-01 11:08:24 Logged in rmoro
+2012-02-01 11:08:24 SELECT  ut.id as user_id, ut.name, surname, ct.id as company_id, ct.name as company_name, ct.short as company_short, r.id as role_id
+		FROM user as ut 
+		INNER JOIN company as ct ON ut.company_id=ct.id 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=1 
+2012-02-01 11:11:22 Logged in rmoro
+2012-02-01 11:11:22 SELECT  ut.id as user_id, ut.name, surname, ct.id as company_id, ct.name as company_name, ct.short as company_short, r.id as role_id
+		FROM user as ut 
+		INNER JOIN company as ct ON ut.company_id=ct.id 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=1 
+2012-02-01 11:46:10 Logged in rmoro
+2012-02-01 11:46:10 SELECT  ut.id as user_id, ut.name, surname, ct.id as company_id, ct.name as company_name, ct.short as company_short, r.id as role_id
+		FROM user as ut 
+		INNER JOIN company as ct ON ut.company_id=ct.id 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=1 
+2012-02-01 11:46:45 Logged in rmoro
+2012-02-01 11:46:45 SELECT  ut.id as user_id, ut.name, surname, ct.id as company_id, ct.name as company_name, ct.short as company_short, r.id as role_id
+		FROM user as ut 
+		INNER JOIN company as ct ON ut.company_id=ct.id 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=1 
+getUsersByProject: SELECT user.id, user.name, user.surname, email, c.short
+FROM user JOIN project_user_lk lk on lk.user_id=user.id 
+JOIN project p on p.id=lk.project_id 
+JOIN company c on c.id=user.company_id
+WHERE lk.project_id=1 
+getUsersByProject: SELECT user.id, user.name, user.surname, email, c.short
+FROM user JOIN project_user_lk lk on lk.user_id=user.id 
+JOIN project p on p.id=lk.project_id 
+JOIN company c on c.id=user.company_id
+WHERE lk.project_id=1 
+getUsersByProject: SELECT user.id, user.name, user.surname, email, c.short
+FROM user JOIN project_user_lk lk on lk.user_id=user.id 
+JOIN project p on p.id=lk.project_id 
+JOIN company c on c.id=user.company_id
+WHERE lk.project_id=1 
+2012-02-01 11:59:42 Logged in pderchi
+2012-02-01 11:59:42 SELECT  ut.id as user_id, ut.name, surname, ct.id as company_id, ct.name as company_name, ct.short as company_short, r.id as role_id
+		FROM user as ut 
+		INNER JOIN company as ct ON ut.company_id=ct.id 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=37 
+2012-03-07 16:41:50 Logged in pderchi
+2012-03-07 16:41:50 SELECT  ut.id as user_id, ut.name, surname, ct.id as company_id, ct.name as company_name, ct.short as company_short, r.id as role_id
+		FROM user as ut 
+		INNER JOIN company as ct ON ut.company_id=ct.id 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=37 
+2013-10-08 12:05:10 Logged FAIL gaabe
+2013-10-08 12:05:17 Logged FAIL gaabe
+2013-10-08 12:05:27 Logged FAIL 
+2013-10-08 12:05:50 Logged FAIL gaabe
+2013-10-08 12:08:41 Logged FAIL rmoro
+2013-10-08 12:10:06 Logged in rmoro
+2013-10-08 12:10:06 SELECT  ut.id as user_id, ut.name, surname, ct.id as company_id, ct.name as company_name, ct.short as company_short, r.id as role_id
+		FROM user as ut 
+		INNER JOIN company as ct ON ut.company_id=ct.id 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=1 
+2013-10-08 12:10:24 Logged in rmoro
+2013-10-08 12:10:24 SELECT  ut.id as user_id, ut.name, surname, ct.id as company_id, ct.name as company_name, ct.short as company_short, r.id as role_id
+		FROM user as ut 
+		INNER JOIN company as ct ON ut.company_id=ct.id 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=1 
+2013-10-08 12:12:12 Logged in rmoro
+2013-10-08 12:12:12 SELECT  ut.id as user_id, ut.name, surname, ct.id as company_id, ct.name as company_name, ct.short as company_short, r.id as role_id
+		FROM user as ut 
+		INNER JOIN company as ct ON ut.company_id=ct.id 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=1 
+getUsersByProject: SELECT user.id, user.name, user.surname, email, c.short
+FROM user JOIN project_user_lk lk on lk.user_id=user.id 
+JOIN project p on p.id=lk.project_id 
+JOIN company c on c.id=user.company_id
+WHERE lk.project_id=2 
+getUsersByProject: SELECT user.id, user.name, user.surname, email, c.short
+FROM user JOIN project_user_lk lk on lk.user_id=user.id 
+JOIN project p on p.id=lk.project_id 
+JOIN company c on c.id=user.company_id
+WHERE lk.project_id=2 
+2013-10-08 14:31:21 Logged in rmoro
+2013-10-08 14:31:21 SELECT  ut.id as user_id, ut.name, surname, ct.id as company_id, ct.name as company_name, ct.short as company_short, r.id as role_id
+		FROM user as ut 
+		INNER JOIN company as ct ON ut.company_id=ct.id 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=1 
+2013-10-09 11:44:17 Logged in rmoro
+2013-10-09 11:44:17 SELECT  ut.id as user_id, ut.name, surname, r.id as role_id
+		FROM user as ut 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=2 
+2013-10-09 11:59:18 Logged in rmoro
+2013-10-09 11:59:18 SELECT  ut.id as user_id, ut.name, surname, r.id as role_id
+		FROM user as ut 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=2 
+2013-10-09 12:01:59 Logged in rmoro
+2013-10-09 12:01:59 SELECT  ut.id as user_id, ut.name, surname, r.id as role_id
+		FROM user as ut 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=2 
+2013-10-09 12:02:43 Logged in rmoro
+2013-10-09 12:02:43 SELECT  ut.id as user_id, ut.name, surname, r.id as role_id
+		FROM user as ut 
+		INNER JOIN user_role_lk as lk ON lk.user_id=ut.id
+		INNER JOIN role as r ON r.id=lk.role_id
+		WHERE ut.id=2 
+SELECT user.*, user_status.status as sstatus
+FROM user join user_status on user_status.id=user.status 
+SELECT u.*, us.status as sstatus 
+FROM user as u 
+INNER JOIN user_status_id as us on us.id=u.status 
+WHERE u.id=2
+ORDER BY u.surname 
+SELECT u.*, us.status as sstatus 
+FROM user as u 
+INNER JOIN user_status as us on us.id=u.status 
+WHERE u.id=2
+ORDER BY u.surname 
+SELECT u.*, us.status as sstatus 
+FROM user as u 
+INNER JOIN user_status as us on us.id=u.status 
+WHERE u.id=2
+ORDER BY u.surname 
