@@ -729,6 +729,7 @@ class Product extends base{
  public $name;
  public $category; //another class for category
  public $price;
+ public $unitprice; // if true (1) the product have a unit price otherwise not
  public $disable;
  public $description;
  
@@ -751,6 +752,7 @@ class Product extends base{
 			$this->id = $v['id'];
 			$this->name = $v['name'];
 			$this->price = $v['price'];
+			$this->unitprice = $v['unitprice'];
 			$this->category = new productCategory($this->_db, $this->log,$v['category_id']);
 	 		$this->description = $v['description'];
 			$this->disable = $v['disable'];
@@ -762,10 +764,10 @@ class Product extends base{
 	}
 }
 
- public function newProduct($name, $description, $category_id, $price, $disable = 0){
-	$q = sprintf("INSERT INTO product (name, description, category_id , price, disable) 
-	values ('%s', '%s', %d, %f, %d)", 
-	$name, addslashes($description), $category_id, $price, $disable);
+ public function newProduct($name, $description, $category_id, $price, $disable = 0, $unitprice = 1){
+	$q = sprintf("INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('%s', '%s', %d, %f, %d, %d)", 
+	$name, addslashes($description), $category_id, $price, $disable, $unitprice);
 	
 	$this->log->logDebug("newProduct: $q");
 	if($this->_db->query($q)){
@@ -776,9 +778,9 @@ class Product extends base{
 	}
 }
 
- public function update($name, $description, $category_id, $price, $disable ){
-	$q = sprintf("update product set name='%s', description='%s', category_id=%d , price=%f, disable=%d where id=%d", 
-	$name, addslashes($description), $category_id, "$price", $disable, $this->id);
+ public function update($name, $description, $category_id, $price, $disable, $unitprice){
+	$q = sprintf("update product set name='%s', description='%s', category_id=%d , price=%f, disable=%d , unitprice=%d where id=%d", 
+	$name, addslashes($description), $category_id, "$price", $disable, $unitprice, $this->id);
 	$this->log->logDebug("updateProduct: $q");
 	if($this->_db->query($q)){
 	  	$this->loadInfo($this->_db->last_id());
@@ -796,16 +798,23 @@ class Product extends base{
  }
 
  public static function listActiveProduct($db, $log){
-	return Product::listProducts($db, $log, 0);
+	return Product::listProducts($db, $log, 0, 1);
  }
 
- public static function listProducts($db, $log, $active = null){
+ public static function listProducts($db, $log, $active = null, $unitprice = null){
         $result= array();
 
         if($db) {
                 $q = "SELECT * FROM product ";
+		$where = "WHERE ";
 		if(!is_null($active ) ){
-			$q .= "WHERE disable=$active";
+			$where .= "disable=$active and ";
+		}
+		if(!is_null($unitprice ) ){
+			$where .= "unitprice=$unitprice and ";
+		}
+		if(strlen($where) > 7){
+			$q .= substr($where,0, strlen($where)-4);
 		}
         }
         $log->logDebug("ListProducts: $q");

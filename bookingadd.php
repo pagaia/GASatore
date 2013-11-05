@@ -129,19 +129,19 @@ if($_POST['book']){
 
 		}
 	}
-	echo "<pre>
-	";
-	var_dump($listBooking);
-	echo "</pre>";
+#	echo "<pre>
+#	";
+#	var_dump($listBooking);
+#	echo "</pre>";
 //	$dPaied = new DonationPaied($db, $log);
 //	$myB = $listBooking[0];
 //	$dPaied->newDonation($_POST['user_id'], $myB->user_id->donation->id, (($_POST['donation_first'] >0)?$_POST['donation_first']:null),(($_POST['donation_second'] >0)?$_POST['donation_second']:null),(($_POST['donation_third'] >0)?$_POST['donation_third']:null),(($_POST['donation_fourt'] >0)?$_POST['donation_fourth']:null));
                   
 	echo "<h2> Prenotazione inserita! Attendi l'aggiornamento</h2>";
-#	echo "<script > 
-#		setTimeout(function(){ window.location = 'listBooking.php'; }, 2000);
-#	</script>";
-#
+	echo "<script > 
+		setTimeout(function(){ window.location = 'listBooking.php'; }, 2000);
+	</script>";
+
 	echo "Guarda il debug:>";			
 //	}else{
 //		echo "<h2>Errore nella creazione del nuovo gaabista</h2>";

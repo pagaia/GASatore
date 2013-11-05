@@ -202,6 +202,7 @@ CREATE TABLE product (
   category_id int(10) unsigned NOT NULL,
   price decimal(10,2) NOT NULL default "0",
   disable int(5) unsigned NOT NULL default 0,
+  unitprice int(5) unsigned NOT NULL default 1,
   description varchar(200) default NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (category_id) REFERENCES product_category (id),

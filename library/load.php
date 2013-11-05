@@ -25,28 +25,47 @@ $db = new Database();
 
 $user= new User($db, $log);
 //$user->newUser($db,'username', 'password', 'tess', 'surnae', 'tel', 'mobile', 'email', 'status');
-$user->newUser('cristina', 'cristina', 'Cristina', 'Surname', 'tel', 'mobile', '', 'second email', 'address', 1001,0,1,1,null,2);
+$user->newUser('cristina', 'cristina', 'Cristina', 'Surname', 'tel', 'mobile', 'cristina@email.it', 'second email', 'address', 1001,0,1,1,null,2);
 $user2 = new User($db, $log);
 $user2->newUser('rmoro', 'rmoro', 'Remo', 'Moro', 'tel', 'mobile', 'remo.moro@mail.com', 'second email', 'address', 1002,0,1,1,null,1);
+$u3 = new User($db, $log);
+$u3->newUser('remo', 'remo', 'Remo', 'Moro', 'tel', 'mobile', 'remo@mail.com', 'second email', 'address', 1003,0,1,1,null,1);
 
 //add Product category
-$pcategory = new productCategory($db, $log);
-$pcategory->newCategory("pane", "Tutti i prodotti di pane");
+$category = array(
+'Sportina' 	=> 'Sportine di frutta e verdura',
+'Prodotti vari' => 'Prodotti vari senza prezzo unitario',
+'Pane' 		=> 'Tutti i tipi di pane',
+'Yogurt' 	=> 'Yogurt dell\'associazione Barikamà',
+'Pesche' 	=> 'Pesche',
+'Uova' 		=> 'Uova da 4 o 6 ',
+'Formaggi' 	=> 'Formaggi'
+);
 
-$cat2 = new productCategory($db, $log);
-$cat2->newCategory("uova", "Tutti i tipi di uova");
+foreach($category as $k => $v){
+	$cat = new productCategory($db, $log);
+	$cat->newCategory($k, $v);
+}
 
-$varie = new productCategory($db, $log);
-$varie->newCategory('Prodotti vari','Prodotti a prezzo variabile'); 
+//add Products
+$product = array();
+$product[] = array('Sportina piccola','Sportina da 5kg','1','8.50');
+$product[] = array('Sportina GRANDE','Sportina da 10kg',1,"17.00");
+$product[] = array('Carne','Carne',2,"1,00");
+$product[] = array('Pane 4 cereali','Pane 4 cereali',3,"4.05");
+$product[] = array('Pane integrale','Pane integrale',3,"4.05");
+$product[] = array('Pane bianco','Pane bianco',3,"4.05");
+$product[] = array('Yogurt piccolo','Yogurt piccolo',4,"2.00");
+$product[] = array('Yogurt medio','Yogurt medio',4,"3.00");
+$product[] = array('Yogurt grande','Yogurt Grande',4,"4.00");
+$product[] = array('Pesche','Pesche',5,"4.00");
+$product[] = array('Uova da 4','Uova da 4',6,"2.00");
+$product[] = array('Uova da 6','Uova da 6',5,"4.00");
 
-$pr = new Product($db, $log);
-$pr->newProduct('uova da 4', 'pacchetto di 4 uova', 2, "4,10");
-
-$p2 = new Product($db, $log);
-$p2->newProduct('pane 4 cereali', 'pane 4 cereali', 1, "4,10");
-
-$p3 = new Product($db, $log);
-$p3->newProduct('Carne', 'Carne di Maiale', 3, "1,00");
+foreach($product as $v){
+	$pro = new Product($db, $log);
+	$pro->newProduct($v[0], $v[1], $v[2], $v[3]);
+}
 
 
 
