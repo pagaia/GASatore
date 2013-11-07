@@ -36,7 +36,7 @@ if(  !$connectedUser->isAdmin()){
                 $count = count($listCategories);
                 for ($i = 0; $i < $count; $i++) {
 			$myC = $listCategories[$i];
-                        echo "<tr>";
+			echo "<tr ".( ($i % 2 == 0)?"class='even'":"" ).">\n";
                         echo "<td><input type='checkbox' name='userid[]' value='".$myC->id."' /></td>";
                         echo "<td><a href='categoryedit.php?cId=".$myC->id."' >".$myC->name."</a></td>";
                         echo "<td>".$myC->description."</td>";

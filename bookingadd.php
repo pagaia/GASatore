@@ -139,7 +139,7 @@ if($_POST['book']){
                   
 	echo "<h2> Prenotazione inserita! Attendi l'aggiornamento</h2>";
 	echo "<script > 
-		setTimeout(function(){ window.location = 'listBooking.php'; }, 2000);
+		setTimeout(function(){ window.location = 'listBookings.php'; }, 2000);
 	</script>";
 
 	echo "Guarda il debug:>";			
@@ -211,7 +211,7 @@ if($_POST['book']){
 	echo "</fieldset>";
 	echo "<fieldset>
 	<legend>Donazioni</legend>";
-
+		
 
 //	$donationPaied = new donationPaied($db, $log, null, 1 );
 	echo "<div class='row'>
@@ -246,34 +246,55 @@ if($_POST['book']){
                 echo '</select>';
 
         echo "<span id='bookingchecker' class='warning' ></span>\n";
- 	echo "<input type='text' class='tnumber red' name='pay_donation'  id='pay_donation' />\n";
+ 	echo "<input type='text' class='tnumber red' name='pay_donation'  id='pay_donation' value='0.00'/>\n";
         echo "</div>";
-	echo "</fieldset>";
+	echo "</fieldset>\n";
 
 	
-	echo "<div class='row'>
-                <label for='header'>Prodotti </label>
-		<span class='header'>Quantità</span>
-		<span class='header'>Prezzo unitario</span>
-		<span class='header'>Totale per prodotto</span>
-	</div><br>";
-	$productsList = Product::listActiveProduct($db, $log);
-	foreach($productsList as $product){
-	       	echo "<div class='row'>
-		<label for='p_$product->id'>$product->name</label>
-		<input type='text' class='tnumber' name='p_$product->id' id='p_$product->id' />
-		<input type='text' class='tnumber' name='price_$product->id'  id='price_$product->id' value='$product->price'  readOnly='true'/>
-		<input type='text' class='tnumber red' name='tprice_$product->id' id='tprice_$product->id'  value='0.00' readOnly='true'/>
-		<span id='p_{$product->id}checker'>checker</span>
-		</div>\n";
+
+	$categories = productCategory::listCategory($db, $log);
+
+	foreach($categories as $cat){
+	 	$productsList = Product::listProductsByCategory($db, $log, $cat->id, 0);
+		if(count($productsList)>0){
+			echo "<fieldset><legend>$cat->name</legend>\n";
+			echo "<div class='row'>
+        		        <label for='header'>Prodotti </label>\n";
+			if($productsList[0]->unitprice){
+				echo "<span class='header'>Quantità</span>
+				<span class='header'>Prezzo unitario</span>\n";
+			}
+			echo "	<span class='header'>Totale per prodotto</span>
+			</div>\n";
+			foreach($productsList as $product){
+			      if(!$product->unitprice){ 	
+				echo "<div class='row'>
+				<label for='pv_$product->id'>$product->name</label>
+				<input type='hidden' class='tnumber' name='pv_$product->id' id='pv_$product->id' value='1'/>
+				<input type='text' class='tnumber' name='tprice_$product->id' id='tprice_$product->id'  value='0.00' />
+				<span id='p_{$product->id}checker'>checker</span>
+				</div>\n";
+				}else{
+				echo "<div class='row'>
+				<label for='p_$product->id'>$product->name</label>
+				<input type='text' class='tnumber' name='p_$product->id' id='p_$product->id' />
+				<input type='text' class='tnumber' name='price_$product->id'  id='price_$product->id' value='$product->price'  readOnly='true'/>
+				<input type='text' class='tnumber red' name='tprice_$product->id' id='tprice_$product->id'  value='0.00' readOnly='true'/>
+				<span id='p_{$product->id}checker'>checker</span>
+				</div>\n";
+
+				}
+			}
+			echo "</fieldset>\n";
+		}	 
 	}
- 
 	echo "<br><div class='row'>
                 <label for='total_cost' style='color:red;'>Costo totale</label>
                 <input type='text' class='tnumber red' name='total_cost' id='total_cost'  value='0.00' readonly='true'/>
                 </div>\n";
 
 
+# create script for javascript
 	echo "<script>
 	    $(function() {
 	";
@@ -281,10 +302,15 @@ if($_POST['book']){
 	// sum all cost per product
 	$total_cost = "var tot = ";
 	$all_products_id = "";
-        foreach($productsList as $product){
-                $total_cost .= " parseFloat($('#tprice_$product->id').val()) + ";
-		$all_products_id .= "$product->id" ."_";
-        }
+	foreach($categories as $cat){
+                $productsList = Product::listProductsByCategory($db, $log, $cat->id, 0);
+                if(count($productsList)>0){
+        	 foreach($productsList as $product){
+         	       $total_cost .= " parseFloat($('#tprice_$product->id').val()) + ";
+			$all_products_id .= "$product->id" ."_";
+        	 }
+		}
+	}
         $total_cost = substr($total_cost,0,(strlen($total_cost)-2)) . ";";
         $all_products_id = substr($all_products_id,0,(strlen($all_products_id)-1));
 
@@ -308,21 +334,35 @@ if($_POST['book']){
                 ";
 
 
-	
-   	foreach($productsList as $product){
-       		echo "
-	    	$('#p_$product->id').change( function() {
-			var punit= $('#price_$product->id').val();
-			var quantity = $('#p_$product->id').val();
-			var tot = punit*quantity;
-			tot = tot.toFixed(2);
-		        $('#tprice_$product->id').val( tot);
-			sumCost();
-		    });
-		";
 
-        }
+	foreach($categories as $cat){
+                $productsList = Product::listProductsByCategory($db, $log, $cat->id, 0);
+                if(count($productsList)>0){
+                 foreach($productsList as $product){
+       		 	if(!$product->unitprice){
 
+			echo "  
+			// sum $product->name
+                        $('#tprice_$product->id').change( function() {
+                                sumCost();
+                            });
+                        ";
+
+			}else{
+			echo "
+		    	$('#p_$product->id').change( function() {
+				var punit= $('#price_$product->id').val();
+				var quantity = $('#p_$product->id').val();
+				var tot = punit*quantity;
+				tot = tot.toFixed(2);
+			        $('#tprice_$product->id').val( tot);
+				sumCost();
+			    });
+			";
+			}
+        	}
+		}
+	}
 
 	echo "});
 	</script>";

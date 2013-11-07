@@ -191,6 +191,7 @@ CREATE TABLE product_category (
   id int(10) unsigned NOT NULL auto_increment,
   name varchar(50) default NULL,
   description varchar(100) default NULL,
+  orderby int(10) default 0,
   PRIMARY KEY (id),
   UNIQUE KEY name (name)
 ) TYPE=INNODB;

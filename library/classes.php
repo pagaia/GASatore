@@ -660,8 +660,8 @@ class productCategory extends base{
 	}
  }
  
- public function newCategory($name, $description){
-        $q = sprintf("INSERT INTO product_category (name, description) values ('%s', '%s')", $name, addslashes($description));
+ public function newCategory($name, $description, $orderby = 0){
+        $q = sprintf("INSERT INTO product_category (name, description, orderby) values ('%s', '%s', %d)", $name, addslashes($description), $orderby);
         if($this->_db->query($q)) {
 		$this->loadInfo($this->_db->last_id());
 		return $this->_db->last_id();
@@ -688,7 +688,7 @@ class productCategory extends base{
         $result = array();
 
         if($db) {
-                $q = "SELECT * FROM product_category ORDER BY name";
+                $q = "SELECT * FROM product_category ORDER BY orderby";
         }
         $a = $db->fetch_all_array($q);
 
@@ -829,16 +829,15 @@ class Product extends base{
         return $result;
  }
 
- public static function listProductsByCategory($db, $log, $category, $active=null){
+ public static function listProductsByCategory($db, $log, $category, $disable=null){
         $result= array();
 
         if($db) {
-                $q = "SELECT * FROM product p 
-		JOIN product_category c on p.category_id=c.id 
-		WHERE c.id=$category ";
-                if(!is_null($active) ){
-                        $q .= " and disable=$active";
+                $q = "SELECT p.id as id FROM product p JOIN product_category c on p.category_id=c.id WHERE c.id=$category ";
+                if(!is_null($disable) ){
+                        $q .= " and disable=$disable ";
                 }
+		$q .= " ORDER BY orderby";
         }
         $log->logDebug("ListProducts: $q");
         $a = $db->fetch_all_array($q);
@@ -846,6 +845,7 @@ class Product extends base{
         if (!empty($a)) {
           foreach ($a as $k => $v) {
                 $result[] = new Product($db, $log, $v['id']);
+                $log->logDebug("listProductsByCategory $k");
                 $log->logDebug($result);
           }
         }
