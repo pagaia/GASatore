@@ -108,6 +108,11 @@ if($_POST['book']){
 	                $pTPrice =      $_POST["tprice_$pId"];
 	                $founds .= "Found: product $pId, quantity $pQuantity, prezzo $pPrice, Tot: $pTPrice\n";
 		}
+                $pVario =    $_POST["pv_$pId"];
+		if($pVArio["pv_$pId"] >0 && $_POST["tprice_$pId"] > 0){
+	                $pTPrice =      $_POST["tprice_$pId"];
+	                $founds .= "Found: product $pId, NO quantity, Tot: $pTPrice\n";
+		}
         }
 
         $founds .= "UserId: ".$_POST['user_id']."\n";
@@ -122,11 +127,15 @@ if($_POST['book']){
 	$listBooking = array();
 	foreach($pIds as $pId){
 		if($_POST["p_$pId"] >0 ){
-		$booking = new booking($db, $log);
-		if($booking->newBooking($_POST['booking_date_id'], $_POST['user_id'], $_POST['pickup_date_id'], $pId, $_POST["p_$pId"], $_POST["tprice_$pId"])){
-			$listBooking[] = $booking;
-		}
-
+			$booking = new booking($db, $log);
+			if($booking->newBooking($_POST['booking_date_id'], $_POST['user_id'], $_POST['pickup_date_id'], $pId, $_POST["p_$pId"], $_POST["tprice_$pId"])){
+				$listBooking[] = $booking;
+			}
+		}elseif($_POST["pv_$pId"] >0 && $_POST["tprice_$pId"] > 0){
+			$booking = new booking($db, $log);
+			if($booking->newBooking($_POST['booking_date_id'], $_POST['user_id'], $_POST['pickup_date_id'], $pId, 0, $_POST["tprice_$pId"])){
+				$listBooking[] = $booking;
+			}
 		}
 	}
 #	echo "<pre>
@@ -138,9 +147,9 @@ if($_POST['book']){
 //	$dPaied->newDonation($_POST['user_id'], $myB->user_id->donation->id, (($_POST['donation_first'] >0)?$_POST['donation_first']:null),(($_POST['donation_second'] >0)?$_POST['donation_second']:null),(($_POST['donation_third'] >0)?$_POST['donation_third']:null),(($_POST['donation_fourt'] >0)?$_POST['donation_fourth']:null));
                   
 	echo "<h2> Prenotazione inserita! Attendi l'aggiornamento</h2>";
-	echo "<script > 
-		setTimeout(function(){ window.location = 'listBookings.php'; }, 2000);
-	</script>";
+#	echo "<script > 
+#		setTimeout(function(){ window.location = 'listBookings.php'; }, 2000);
+#	</script>";
 
 	echo "Guarda il debug:>";			
 //	}else{
@@ -152,7 +161,7 @@ if($_POST['book']){
  	$founds = "<pre>";
         $pIds = explode("_",$_POST['all_products_id']);
         foreach( $pIds as $pId){
-		 $pQuantity =    $_POST["p_$pId"];
+		$pQuantity =    $_POST["p_$pId"];
                 $pPrice =       $_POST["price_$pId"];
                 $pTPrice =      $_POST["tprice_$pId"];
                 $founds .= "Found: product $pId, quantity $pQuantity, prezzo $pPrice, Tot: $pTPrice\n";
@@ -207,12 +216,11 @@ if($_POST['book']){
                 echo '</select>';
         echo "</span><span id='pickupchecker' class='warning' ></span></div>\n";
 
-/* DONATION PARAGRAPH */
 	echo "</fieldset>";
+
+/* DONATION PARAGRAPH */
 	echo "<fieldset>
 	<legend>Donazioni</legend>";
-		
-
 //	$donationPaied = new donationPaied($db, $log, null, 1 );
 	echo "<div class='row'>
                 <label for='header'>donazioni</label>
@@ -288,11 +296,35 @@ if($_POST['book']){
 			echo "</fieldset>\n";
 		}	 
 	}
+			
+	echo "<fieldset><legend>Conteggio Totali e cassa</legend>\n";
+
 	echo "<br><div class='row'>
-                <label for='total_cost' style='color:red;'>Costo totale</label>
+                <label for='total_cost' style='color:red;'>Totale Conti</label>
                 <input type='text' class='tnumber red' name='total_cost' id='total_cost'  value='0.00' readonly='true'/>
                 </div>\n";
+	echo "<div class='row'>
+                <label for='total_paied' >Totale pagato </label>
+                <input type='text' class='tnumber ' name='total_paied' id='total_paied'  value='0.00' />
+                </div>\n";
+	echo "<div class='row'>
+                <label for='return_sugg' >Suggerimento resto</label>
+                <input type='text' class='tnumber' name='return_sugg' id='return_sugg'  value='0.00' readonly='true'/>
+                </div>\n";
+	echo "<div class='row'>
+                <label for='return2user' >Resto</label>
+                <input type='text' class='tnumber' name='return2user' id='return2user'  value='0.00' />
+                </div>\n";
+	echo "<div class='row'>
+                <label for='total_cassa' >Totale cassa</label>
+                <input type='text' class='tnumber' name='total_cassa' id='total_cassa'  value='0.00' readonly='true'/>
+                </div>\n";
+	echo "<div class='row'>
+                <label for='debito_credito' >Debito/Credito gaabista</label>
+                <input type='text' class='tnumber' name='debito_credito' id='debito_credito'  value='0.00' readonly='true'/>
+                </div>\n";
 
+	echo "</fieldset>\n";
 
 # create script for javascript
 	echo "<script>
@@ -316,9 +348,6 @@ if($_POST['book']){
 
           echo "
 		var newDonation= 0;
-		$( '#pay_donation').change(function( index ) {
-			sumCost();
-		});
 
         	function sumDonation(){
 			newDonation = parseFloat($('#pay_donation').val());
@@ -330,7 +359,51 @@ if($_POST['book']){
 			tot = tot + newDonation;
                         tot = tot.toFixed(2);
                         $('#total_cost').val( tot);
+			calcolaDebito();
                     }
+		$( '#pay_donation').change(function( index ) {
+			if($(this).val() == ''){ $(this).val('0.00');}
+			sumCost();
+		});
+
+	       function calcolaResto(){
+			var resto = parseFloat($('#total_paied').val()) - parseFloat($('#total_cost').val()) ;
+			if(resto > 0){
+				resto = resto.toFixed(2);
+				$('#return_sugg').val(resto);
+			}
+		}
+
+		function calcolaCassa(){
+                        var cassa = parseFloat($('#total_paied').val()) - parseFloat($('#return2user').val()) ;
+                        cassa = cassa.toFixed(2);
+                        $('#total_cassa').val(cassa);
+                }
+	
+		function calcolaDebito(){
+                        var debito = parseFloat($('#total_paied').val()) - parseFloat($('#return2user').val()) - parseFloat($('#total_cost').val());
+                        debito = debito.toFixed(2);
+			if(debito < 0){
+	                        $('#debito_credito').val(debito).css('color','red');
+			}else{
+                        	$('#debito_credito').val(debito).css('color','black');
+			}
+                }
+
+		$( '#total_paied').change(function( index ) {
+			if($(this).val() == ''){ $(this).val('0.00');}
+			calcolaResto();
+			calcolaCassa();
+			calcolaDebito();
+		});
+
+
+		$( '#return2user').change(function( index ) {
+			if($(this).val() == ''){ $(this).val('0.00');}
+			calcolaCassa();
+			calcolaDebito();
+		});
+
                 ";
 
 

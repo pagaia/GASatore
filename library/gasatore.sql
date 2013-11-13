@@ -229,8 +229,9 @@ CREATE TABLE booking (
   user_id int(10) unsigned NOT NULL,
   pickup_date_id int(10) unsigned NOT NULL,
   product_id int(10) unsigned NOT NULL,
-  quantity decimal(10,2) unsigned NOT NULL,
+  quantity int(10) unsigned NOT NULL,
   tot_price decimal(10,2) NOT NULL default "0",
+  ModTime TIMESTAMP NOT NULL default CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
   FOREIGN KEY (booking_date_id) REFERENCES calendar (id),
   FOREIGN KEY (user_id) REFERENCES user (id),
@@ -250,12 +251,16 @@ id	data ordine	utente	data ritiro	prodotto	quantità	tot (euro)
 DROP TABLE IF EXISTS user_payment;
 CREATE TABLE user_payment (
   id int(10) unsigned NOT NULL auto_increment,
+  booking_date_id int(10) unsigned NOT NULL,
   user_id int(10) unsigned NOT NULL,
+  pickup_date_id int(10) unsigned NOT NULL,
   date TIMESTAMP NOT NULL default CURRENT_TIMESTAMP,
   owed decimal(10,2) NOT NULL, 
   payed  decimal(10,2) NOT NULL,
   debit_credit  decimal(10,2) NOT NULL,
   PRIMARY KEY (id),
+  FOREIGN KEY (booking_date_id) REFERENCES calendar (id),
+  FOREIGN KEY (pickup_date_id) REFERENCES calendar (id),
   FOREIGN KEY (user_id) REFERENCES user (id)
 ) TYPE=INNODB;
 /*

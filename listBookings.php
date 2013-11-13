@@ -87,6 +87,7 @@ if(  !$connectedUser->isAdmin()){
                                 }
 
 				$singleUserB["id_".$booking->product_id->id] = $booking->quantity;
+				$singleUserB["unitprice_".$booking->product_id->id] = $booking->product_id->unitprice;
 				$singleUserB["price_".$booking->product_id->id] = $booking->tot_price;
 			}	
 			$singleUserB['total'] = $uB->totalCost;
@@ -99,7 +100,7 @@ if(  !$connectedUser->isAdmin()){
                 echo "<table>";
                 echo "<tr><th class='vtext'>Booking</th><th class='vtext'>Gaabista</th><th class='vtext'>pickup</th>";
                 foreach($listProducts as $p){
-                        echo "<th class='ncol'>$p->name ($p->price &euro;)</th>";
+                        echo "<th class='ncol'>$p->name ".($p->price>0? "($p->price &euro;)":"")."</th>";
                 }
 		echo "<th class='vtext'>costo totale</th>";
                 echo "</tr>\n";
@@ -111,10 +112,19 @@ if(  !$connectedUser->isAdmin()){
 			echo "<td style='text-align:left;'> <a href='user.php?uId=".$v['user_id']."'>" .$v['user_surname']." ".$v['user_name']."</a></td>";
 			echo "<td> ".strftime("%a %d %b %g", strtotime($v['pickupday']))."</td>";
  			foreach($listProducts as $p){
-				echo "<td >" .$v["id_".$p->id]."</td>";
+				switch($v["id_".$p->id]){
+				case "1":
+				{echo "<td >" .$v["id_".$p->id]."</td>";}
+				break;
+				case "0":
+				{echo "<td >" .$v["price_".$p->id]."&euro;</td>";}
+				break;
+				default:
+				echo "<td ></td>";
+				}
 		
 			}
-			echo "<td> ". money_format('%.2n', $v['total'])."</td>";
+			echo "<td> ". number_format ($v['total'], 2)." &euro;</td>";
 			echo "</tr>\n";
 		
 		}

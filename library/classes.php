@@ -1086,15 +1086,17 @@ class userPayment extends base{
  public $id;
  public $user;
  public $date;
+ public $booking_date;
+ public $pickup_date;
  public $owed;
  public $payed;  
  public $debit_credit;
 
- public function __construct($db, $log)  {
+ public function __construct($db, $log, $id = null)  {
         $this->log = $log;
 	$this->log->logInfo( 'The class "'. __CLASS__. '" was initiated!');
         $this->_db = $db;
-//        if($user_id && ($booking_date_id || $pickup_date_id)){$this->loadInfo($user_id, $booking_date_id, $pickup_date_id);}
+	if(!is_null($id)){$this->loadInfo($id);}
  }
 
  public function loadInfo($id){
@@ -1109,6 +1111,8 @@ class userPayment extends base{
                   foreach ($a as $k => $v) {
                         $this->user = new User($this->_db, $this->log, $v['user_id']);
  			$this->date = $v['date'];
+ 			$this->booking_date = $v['booking_date'];
+ 			$this->pickup_date = $v['pickup_date'];
 			$this->owed = $v['owed'];
 			$this->payed = $v['payed'];
 			$this->debit_credit = $v['debit_credit'];
@@ -1120,26 +1124,27 @@ class userPayment extends base{
         }
  }
 
- public function newPayment($user_id, $date, $owed, $payed, $debitCredit = null){
+ public function newPayment($user_id, $booking_date, $pickup_date, $owed, $payed, $debitCredit = null){
  
 	if(!$debitCredit){ $debitCredit = $payed - $owed;}
-	$q = sprintf("INSERT INTO user_payment (user_id, date, owed, payed, debit_credit) values (%d, '%s', %f, %f, %f)",
-        $user_id, $date, $owed, $payed, $debitCredit);
+	$q = sprintf("INSERT INTO user_payment (user_id, booking_date, pickup_date, owed, payed, debit_credit) values (%d, %d, %d, %f, %f, %f)",
+        $user_id, $booking_date, $pickup_date, $owed, $payed, $debitCredit);
 
-        $this->log->logDebug("newPayment: $user_id, $date, $owed, $payed, $debitCredit");
+        $this->log->logDebug("newPayment: $q");
         $this->_db->query($q);
         $this->loadInfo($this->_db->last_id());
 
-
+	return $this->id;
 }
 
- public function update($user_id, $date, $owed, $payed, $debitCredit){
+ public function update($user_id, $booking_date, $pickup_date, $owed, $payed, $debitCredit){
         if(!$this->$id){
-                $q = sprintf("update user_payment set user_id=%d, date='%s', owed=%f, payed=%f, debiti_credit=%f where id=%d",
-                $user_id, $date, $owed, $payed, $debitCredit, $this->id);
-                $this->log->logDebug("updatePayment: $user_id, $date, $owed, $payed, $debitCredit, ".$this->id);
+                $q = sprintf("update user_payment set user_id=%d, booking_date='%s', pickup_date='%s', owed=%f, payed=%f, debiti_credit=%f where id=%d",
+                $user_id, $booking_date, $pickup_date, $owed, $payed, $debitCredit, $this->id);
+                $this->log->logDebug("updatePayment: $q");
                 $this->_db->query($q);
                 $this->loadInfo($this->_db->last_id());
+		return true;
         }else{
                 return false;
         }

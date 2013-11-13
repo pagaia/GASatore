@@ -34,6 +34,7 @@ $u3->newUser('remo', 'remo', 'Remo', 'Moro', 'tel', 'mobile', 'remo@mail.com', '
 //add Product category
 $category = array();
 $category[] = array('Sportina', 'Sportine di frutta e verdura');
+$category[] = array('Donazioni', 'Donazioni trimestrali e quota d\'ingresso');
 $category[] = array('Prodotti senza prezzo unitario', 'Prodotti vari senza prezzo unitario');
 $category[] = array('Pane', 'Tutti i tipi di pane');
 $category[] = array('Yogurt', 'Yogurt dell\'associazione Barikamà');
@@ -51,20 +52,24 @@ foreach($category as $v){
 $product = array();
 $product[] = array('Sportina piccola','Sportina da 5kg','1','8.50',0,1);
 $product[] = array('Sportina GRANDE','Sportina da 10kg',1,"17.00",0,1);
-$product[] = array('Carne','Carne',2,"1,00",0,0);
-$product[] = array('Pane 4 cereali','Pane 4 cereali',3,"4.05",0,1);
-$product[] = array('Pane integrale','Pane integrale',3,"4.05",0,1);
-$product[] = array('Pane bianco','Pane bianco',3,"4.05",0,1);
-$product[] = array('Yogurt piccolo','Yogurt piccolo',4,"2.00",0,1);
-$product[] = array('Yogurt medio','Yogurt medio',4,"3.00",0,1);
-$product[] = array('Yogurt grande','Yogurt Grande',4,"4.00",0,1);
-$product[] = array('Pesche','Pesche',5,"4.00",1,1);
-$product[] = array('Uova da 4','Uova da 4',6,"2.00",0,1);
-$product[] = array('Uova da 6','Uova da 6',6,"4.00",0,1);
+$product[] = array('Carne','Carne',3,"1,00",0,0);
+$product[] = array('Pane 4 cereali','Pane 4 cereali',4,"4.05",0,1);
+$product[] = array('Pane integrale','Pane integrale',4,"4.05",0,1);
+$product[] = array('Pane bianco','Pane bianco',4,"4.05",0,1);
+$product[] = array('Yogurt piccolo','Yogurt piccolo',5,"2.00",0,1);
+$product[] = array('Yogurt medio','Yogurt medio',5,"3.00",0,1);
+$product[] = array('Yogurt grande','Yogurt Grande',5,"4.00",0,1);
+$product[] = array('Pesche','Pesche',6,"4.00",1,1);
+$product[] = array('Uova da 4','Uova da 4',7,"2.00",0,1);
+$product[] = array('Uova da 6','Uova da 6',7,"4.00",0,1);
 $product[] = array('Quota ingresso','Quota di ingresso 5 euro',2,"1.00",0,0);
-$product[] = array('Restituzione','Resituisco al gaabista dei soldi',2,"1.00",0,0);
-$product[] = array('Altri prodotti','Altri prodotti venduti',2,"1.00",0,0);
-$product[] = array('Fuori sporta','Frutta e verdura fuori sporta',2,"1.00",0,0);
+$product[] = array('Restituzione','Resituisco al gaabista dei soldi',3,"1.00",0,0);
+$product[] = array('Altri prodotti','Altri prodotti venduti',3,"1.00",0,0);
+$product[] = array('Fuori sporta','Frutta e verdura fuori sporta',3,"1.00",0,0);
+$product[] = array('Prima quota trim.','Prima quota trimestrale',2,"1.00",0,0);
+$product[] = array('Seconda quota trim.','Seconda quota trimestrale',2,"1.00",0,0);
+$product[] = array('Terza quota trim.','Terza quota trimestrale',2,"1.00",0,0);
+$product[] = array('Quarta quota trim.','Quarta quota trimestrale',2,"1.00",0,0);
 
 foreach($product as $v){
 	$pro = new Product($db, $log);
