@@ -65,12 +65,12 @@ if(  !$connectedUser->isAdmin()){
 		
 	}else{
 
-		setlocale(LC_ALL, 'it_IT');
+		//setlocale(LC_ALL, 'it_IT');
 	
 		$listProducts = Product::listProducts($db, $log);
-		$listBooking  = userBooking::listBookings($db, $log);
+		//$log->LogDebug($listProducts);
+		$listBooking  = bookingList::listBookings($db, $log);
 		echo "<div id='Content'>";
-		echo "<pre>";
 		
 		$bookingArray = array();
 		foreach($listBooking as $uB){
@@ -78,31 +78,30 @@ if(  !$connectedUser->isAdmin()){
 			$singleUserB['user_id'] = $uB->user->id;
 			$singleUserB['user_name'] = $uB->user->name;
 			$singleUserB['user_surname'] = $uB->user->surname;
-			foreach ($uB->booking_list as $booking){
-				if(!$singleUserB['bookingday']){
-					$singleUserB['bookingday'] = $booking->booking_date_id->day;
-				}
- 				if(!$singleUserB['pickupday']){ 
-                                        $singleUserB['pickupday'] = $booking->pickup_date_id->day;
-                                }
-
+			$singleUserB['bookingday'] = $uB->booking_date_id->day;
+			$singleUserB['pickupday'] = $uB->pickup_date_id->day;
+			$singleUserB['owed'] = $uB->owed;
+			$singleUserB['paied'] = $uB->paied;
+			$singleUserB['debit'] = $uB->debit_credit;
+			
+			foreach ($uB->listBooking as $booking){
 				$singleUserB["id_".$booking->product_id->id] = $booking->quantity;
 				$singleUserB["unitprice_".$booking->product_id->id] = $booking->product_id->unitprice;
 				$singleUserB["price_".$booking->product_id->id] = $booking->tot_price;
 			}	
-			$singleUserB['total'] = $uB->totalCost;
 
 				
 			$bookingArray[] = $singleUserB; 
 		}
-		echo "</pre>";
 		echo "<p> Qui di seguito tutte le prenotazioni dei gaabisti</p>\n";
                 echo "<table>";
                 echo "<tr><th class='vtext'>Booking</th><th class='vtext'>Gaabista</th><th class='vtext'>pickup</th>";
                 foreach($listProducts as $p){
                         echo "<th class='ncol'>$p->name ".($p->price>0? "($p->price &euro;)":"")."</th>";
                 }
-		echo "<th class='vtext'>costo totale</th>";
+		echo "<th class='vtext'>dovuto</th>";
+		echo "<th class='vtext'>pagato</th>";
+		echo "<th class='vtext'>debito/credito</th>";
                 echo "</tr>\n";
 
                 $count = 0;
@@ -124,7 +123,10 @@ if(  !$connectedUser->isAdmin()){
 				}
 		
 			}
-			echo "<td> ". number_format ($v['total'], 2)." &euro;</td>";
+
+			echo "<td> ". number_format ($v['owed'], 2)." &euro;</td>";
+			echo "<td> ". number_format ($v['paied'], 2)." &euro;</td>";
+			echo "<td> ". number_format ($v['debit'], 2)." &euro;</td>";
 			echo "</tr>\n";
 		
 		}

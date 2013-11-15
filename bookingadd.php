@@ -101,6 +101,9 @@ if($_POST['book']){
 
 	$founds = "<pre>";
         $pIds = explode("_",$_POST['all_products_id']);
+        $founds .= "UserId: ".$_POST['user_id']."\n";
+        $founds .= "Booking date: ".$_POST['booking_date_id']."\n";
+        $founds .= "Pickup date: ".$_POST['pickup_date_id']."\n";
         foreach( $pIds as $pId){
                 $pQuantity =    $_POST["p_$pId"];
 		if($pQuantity >0){
@@ -109,35 +112,47 @@ if($_POST['book']){
 	                $founds .= "Found: product $pId, quantity $pQuantity, prezzo $pPrice, Tot: $pTPrice\n";
 		}
                 $pVario =    $_POST["pv_$pId"];
-		if($pVArio["pv_$pId"] >0 && $_POST["tprice_$pId"] > 0){
+		if($pVario["pv_$pId"] >0 && $_POST["tprice_$pId"] > 0){
 	                $pTPrice =      $_POST["tprice_$pId"];
 	                $founds .= "Found: product $pId, NO quantity, Tot: $pTPrice\n";
 		}
         }
 
-        $founds .= "UserId: ".$_POST['user_id']."\n";
-        $founds .= "Booking date: ".$_POST['booking_date_id']."\n";
-        $founds .= "Pickup date: ".$_POST['pickup_date_id']."\n";
+	$founds .= "Total costs: ".$_POST['total_cost']."\n";
+	$founds .= "Total paied: ".$_POST['total_paied']."\n";
+	$founds .= "Resto: ".$_POST['return2user']."\n";
+	$founds .= "Totale cassa: ".$_POST['totale_cassa']."\n";
+	$founds .= "Debito/credito: ".$_POST['debito_credito']."\n";
+
 
  	$founds .= "</pre>";
 
         echo $founds;
 
+// first create a new userBooking
+	$itemsList = array();
+	$userBooking = new userBooking($db, $log);
+	$userBooking->newUserBooking($_POST['user_id'], $_POST['booking_date_id'], $_POST['pickup_date_id'],  $_POST['total_cost'], $_POST['total_paied'] - $_POST['return2user'], $_POST['debito_credito']);
 
-	$listBooking = array();
 	foreach($pIds as $pId){
 		if($_POST["p_$pId"] >0 ){
-			$booking = new booking($db, $log);
-			if($booking->newBooking($_POST['booking_date_id'], $_POST['user_id'], $_POST['pickup_date_id'], $pId, $_POST["p_$pId"], $_POST["tprice_$pId"])){
-				$listBooking[] = $booking;
-			}
+			$item = array();
+			$item['product_id'] = $pId;
+			$item['quantity']   = $_POST["p_$pId"];
+			$item['tot_price']  = $_POST["tprice_$pId"];
+			$itemsList[] = $item;
+			$log->LogDebug("Aggiunto un item: $item");
 		}elseif($_POST["pv_$pId"] >0 && $_POST["tprice_$pId"] > 0){
-			$booking = new booking($db, $log);
-			if($booking->newBooking($_POST['booking_date_id'], $_POST['user_id'], $_POST['pickup_date_id'], $pId, 0, $_POST["tprice_$pId"])){
-				$listBooking[] = $booking;
-			}
+			$item = array();
+                        $item['product_id'] = $pId;
+                        $item['quantity']   = 0;
+                        $item['tot_price']  = $_POST["tprice_$pId"];
+			$itemsList[] = $item;
+			$log->LogDebug("Aggiunto un item pv: $item");
+
 		}
 	}
+	$userBooking->addItems($itemsList);
 #	echo "<pre>
 #	";
 #	var_dump($listBooking);
@@ -160,6 +175,9 @@ if($_POST['book']){
 	setlocale(LC_ALL, 'it_IT');
  	$founds = "<pre>";
         $pIds = explode("_",$_POST['all_products_id']);
+	$founds .= "UserId: ".$_POST['user_id']."\n";
+	$founds .= "Booking date: ".$_POST['booking_date_id']."\n";
+	$founds .= "Pickup date: ".$_POST['pickup_date_id']."\n";
         foreach( $pIds as $pId){
 		$pQuantity =    $_POST["p_$pId"];
                 $pPrice =       $_POST["price_$pId"];
@@ -167,11 +185,13 @@ if($_POST['book']){
                 $founds .= "Found: product $pId, quantity $pQuantity, prezzo $pPrice, Tot: $pTPrice\n";
         }
        
-	$founds .= "UserId: ".$_POST['user_id']."\n";
-	$founds .= "Booking date: ".$_POST['booking_date_id']."\n";
-	$founds .= "Pickup date: ".$_POST['pickup_date_id']."\n";
  
-	 $founds .= "</pre>";
+	$founds .= "Total costs: ".$_POST['total_cost']."\n";
+	$founds .= "Total paied: ".$_POST['total_paied']."\n";
+	$founds .= "Resto: ".$_POST['return2user']."\n";
+	$founds .= "Totale cassa: ".$_POST['totale_cassa']."\n";
+	
+ 	$founds .= "</pre>";
 
 	echo $founds;
 

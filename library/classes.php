@@ -696,7 +696,7 @@ class productCategory extends base{
           foreach ($a as $k => $v) {
                 $result[] = new productCategory($db, $log, $v['id']);
 		$log->logDebug("Log ListCategory");
-                $log->logDebug($result);
+      //          $log->logDebug($result);
           }
         }
         return $result;
@@ -823,7 +823,7 @@ class Product extends base{
         if (!empty($a)) {
           foreach ($a as $k => $v) {
                 $result[] = new Product($db, $log, $v['id']);
-                $log->logDebug($result);
+       //         $log->logDebug($result);
           }
         }
         return $result;
@@ -846,7 +846,7 @@ class Product extends base{
           foreach ($a as $k => $v) {
                 $result[] = new Product($db, $log, $v['id']);
                 $log->logDebug("listProductsByCategory $k");
-                $log->logDebug($result);
+//                $log->logDebug($result);
           }
         }
         return $result;
@@ -862,9 +862,7 @@ class Product extends base{
 class booking extends base{
 
  private $id;
- public $booking_date_id; //class calendar
- public $user_id; // class user
- public $pickup_date_id; //class calenda
+ public $user_booking_id; // User Booking id
  public $product_id; // class product
  public $quantity;
  public $tot_price;
@@ -886,24 +884,24 @@ class booking extends base{
                 if (!empty($a)) {
                   foreach ($a as $k => $v) {
                         $this->id = $v['id'];
-                        $this->booking_date_id = new calendar($this->_db, $this->log, $v['booking_date_id']);
-                        $this->user_id = new User($this->_db, $this->log, $v['user_id']);
-                        $this->pickup_date_id = new calendar($this->_db, $this->log, $v['pickup_date_id']);
+                        $this->user_booking_id = $v['user_booking_id'];
                         $this->product_id = new Product($this->_db, $this->log, $v['product_id']);
                         $this->quantity = $v['quantity'];
                         $this->tot_price = $v['tot_price'];
                   }
 
                 }
+		return $this->id;
         }else{
                 return false;
         }
  }
 
- public function newBooking($booking_date_id, $user_id, $pickup_date_id, $product_id, $quantity, $tot_price){
+ public function newBooking($user_booking_id, $item){
+	//$user_id, $pickup_date_id, $product_id, $quantity, $tot_price){
  
-	$q = sprintf("INSERT INTO booking (booking_date_id, user_id, pickup_date_id , product_id, quantity, tot_price) values (%d, %d, %d, %d, %d, %f)", 
-	$booking_date_id, $user_id, $pickup_date_id, $product_id, $quantity, $tot_price);
+	$q = sprintf("INSERT INTO booking (user_booking_id, product_id, quantity, tot_price) values (%d, %d, %d, %f)", 
+	$user_booking_id, $item['product_id'], $item['quantity'], $item['tot_price']);
 
         $this->log->logDebug("newBooking: $q");
         if($this->_db->query($q)){
@@ -915,23 +913,16 @@ class booking extends base{
 
  }
 
- public function update($booking_date_id, $user_id, $pickup_date_id, $product_id, $tot_price ){ 
-	$q = sprintf("update booking set booking_date_id=%d, user_id=%d, pickup_date_id=%d , product_id=%d, tot_price=%f where id=%d",
-	$booking_date_id, $user_id, $pickup_date_id, $product_id, $tot_price, $this->id);
-	$this->log->logDebug("updateBooking: $booking_date_id, $user_id, $pickup_date_id, $product_id, $tot_price");
+ public function update($user_booking_id, $item){ 
+	$q = sprintf("update booking set user_booking_id=%d, product_id=%d, quantity=%d, tot_price=%f where id=%d",
+	$user_booking_id, $item['product_id'], $item['quantity'], $item['tot_price'] , $this->id);
+	$this->log->logDebug("updateBooking: $q");
 	if($this->_db->query($q)){
 	        $this->loadInfo($this->_db->last_id());
 		return $this->id;
 	}else{
 		return false;
 	}
- }
-
- public function disable($disable){
-        $q = sprintf("update product set disable='%d' where id=%d", $disable, $this->id);
-        $this->log->logDebug("Disable product $id");
-        $this->_db->query($q);
-        $this->disable = $disable;
  }
 
  public function __destructor (){
@@ -943,7 +934,7 @@ class booking extends base{
 
 
 
-class userBooking extends base{
+class bookingList extends base{
 
  public $booking_list; // a list of booking for the same user
  public $user; // the user information
@@ -1018,7 +1009,7 @@ class userBooking extends base{
         $result= array();
 
         if($db) {
-                $q = "SELECT * FROM booking "; 
+                $q = "SELECT * FROM user_booking "; 
                 
 		if(!is_null($userId ) || !is_null($bookingDateId) || !is_null($pickupDateId) ){
                         $q .= "WHERE ";
@@ -1042,7 +1033,7 @@ class userBooking extends base{
 
         if (!empty($a)) {
           foreach ($a as $k => $v) {
-                $result[] = new userBooking($db, $log, $v['user_id'], $v['booking_date_id'], $v['pickup_date_id']);
+                $result[] = new userBooking($db, $log, $v['id']);
                 $log->logDebug($result);
           }
         }
@@ -1081,16 +1072,18 @@ class userBooking extends base{
 
 
 
-class userPayment extends base{
+class userBooking extends base{
 
  public $id;
- public $user;
- public $date;
- public $booking_date;
- public $pickup_date;
+ public $user; //class of user
+ public $timestamp;
+ public $booking_date_id; // class of Calendar
+ public $pickup_date_id; // Calss of Calendar
  public $owed;
- public $payed;  
+ public $paied;  
  public $debit_credit;
+
+ public $listBooking; // array of booking class
 
  public function __construct($db, $log, $id = null)  {
         $this->log = $log;
@@ -1103,36 +1096,87 @@ class userPayment extends base{
        
         // query database
         if($id) {
-                $q = "SELECT * FROM user_payment WHERE id=$id";
-
+		//$q = "SELECT *, ub.id as ubid, b.id as bid  FROM user_booking ub JOIN booking b on b.user_booking_id=ub.id WHERE ub.id=$id";
+		$q = "SELECT * FROM user_booking WHERE id=$id";
+		$this->log->logDebug("LoadInfo UserBooking: $q");
                 $a = $this->_db->fetch_all_array($q);
 
                 if (!empty($a)) {
+		$count=0;
+		$listBooking = array();
                   foreach ($a as $k => $v) {
-                        $this->user = new User($this->_db, $this->log, $v['user_id']);
- 			$this->date = $v['date'];
- 			$this->booking_date = $v['booking_date'];
- 			$this->pickup_date = $v['pickup_date'];
-			$this->owed = $v['owed'];
-			$this->payed = $v['payed'];
-			$this->debit_credit = $v['debit_credit'];
+                        if(!$count++){
+		                $this->log->logDebug("Count vale $count. Dentro il  foreach");
+
+				$this->id = $v['id'];
+				$this->user = new User($this->_db, $this->log, $v['user_id']);
+				$this->timestamp = $v['timestamp'];
+ 				$this->booking_date_id = new calendar ($this->_db, $this->log, $v['booking_date_id']);
+ 				$this->pickup_date_id = new calendar ($this->_db, $this->log, $v['pickup_date_id']);
+				$this->owed = $v['owed'];
+				$this->paied = $v['paied'];
+				$this->debit_credit = $v['debit_credit'];
+			}
+			
+		//$listBooking[] = new booking($this->_db, $this->log, $v['bid']);
+
                   }
+		
+		$this->log->logDebug("Uscito dal foreach ");
+		$this->loadBooking();
 
                 }
+		
+		return true;
         }else{ 
                 return false;
         }
  }
 
- public function newPayment($user_id, $booking_date, $pickup_date, $owed, $payed, $debitCredit = null){
- 
-	if(!$debitCredit){ $debitCredit = $payed - $owed;}
-	$q = sprintf("INSERT INTO user_payment (user_id, booking_date, pickup_date, owed, payed, debit_credit) values (%d, %d, %d, %f, %f, %f)",
-        $user_id, $booking_date, $pickup_date, $owed, $payed, $debitCredit);
+ public function loadBooking(){
+ // query database
+                //$q = "SELECT *, ub.id as ubid, b.id as bid  FROM user_booking ub JOIN booking b on b.user_booking_id=ub.id WHERE ub.id=$id";
+		$indt = 6;
+		CONTROLLARE PERCHé NON PRENDE this->id
+                $q = sprintf("SELECT b.id as bId FROM user_booking ub JOIN booking as b on b.user_booking_id=ub.id WHERE ub.id=%d",$int);
+		$this->log->logDebug("UserBooking -> loadBooking: $q");
+                $a = $this->_db->fetch_all_array($q);
 
-        $this->log->logDebug("newPayment: $q");
+                if (!empty($a)) {
+                $count=0;
+                $listBooking = array();
+                  foreach ($a as $k => $v) {
+                        $listBooking[] = new booking($this->_db, $this->log, $v['bId']);
+
+                  }
+
+                }
+
+                return $listBooking;
+ }
+ 
+ public function addItems($itemsList){
+
+	foreach($itemsList as $item){
+		$this->log->LogDebug($item);
+		$booking = new booking($this->_db, $this->log);
+		$booking->newBooking($this->id, $item);
+		$this->listBooking[] = $booking;
+	}
+ }
+ 
+ public function newUserBooking($user_id, $booking_date_id, $pickup_date_id, $owed, $paied, $debitCredit){
+	
+	 
+	if(!$debitCredit){ $debitCredit = $payed - $owed;}
+	$q = sprintf("INSERT INTO user_booking (user_id, booking_date_id, pickup_date_id, owed, paied, debit_credit) values (%d, %d, %d, %f, %f, %f)",
+        $user_id, $booking_date_id, $pickup_date_id, $owed, $paied, $debitCredit);
+
+        $this->log->logDebug("newUserBooking: $q");
         $this->_db->query($q);
         $this->loadInfo($this->_db->last_id());
+
+        $this->log->logDebug("New USr Boookind ID: ".$this->id);
 
 	return $this->id;
 }

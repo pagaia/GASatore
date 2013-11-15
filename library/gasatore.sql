@@ -16,8 +16,8 @@ CREATE DATABASE $DB;
 USE $DB;
 
 
-DROP TABLE IF EXISTS user_payment;
 DROP TABLE IF EXISTS booking;
+DROP TABLE IF EXISTS user_booking;
 DROP TABLE IF EXISTS product;
 DROP TABLE IF EXISTS product_category;
 DROP TABLE IF EXISTS donation_paied;
@@ -221,23 +221,43 @@ id	tipo	nome	 costo 	descrizione
 6	yogurt	 VASETTO GRANDE 660 ml (6,06 € / Kg.) 	 € 6,00 	 VASETTO GRANDE 660 ml (6,06 € / Kg.) 
 7	pane	Bianco - 900	 € 4,05 	Bianco - 900
 */
-	
-DROP TABLE IF EXISTS booking;
-CREATE TABLE booking (
+
+DROP TABLE IF EXISTS user_booking;
+CREATE TABLE user_booking (
   id int(10) unsigned NOT NULL auto_increment,
   booking_date_id int(10) unsigned NOT NULL,
   user_id int(10) unsigned NOT NULL,
   pickup_date_id int(10) unsigned NOT NULL,
+  timestamp TIMESTAMP NOT NULL default CURRENT_TIMESTAMP,
+  owed decimal(10,2) NOT NULL default 0,
+  paied  decimal(10,2) NOT NULL default 0,
+  debit_credit  decimal(10,2) NOT NULL default 0,
+  PRIMARY KEY (id),
+  FOREIGN KEY (booking_date_id) REFERENCES calendar (id),
+  FOREIGN KEY (pickup_date_id) REFERENCES calendar (id),
+  FOREIGN KEY (user_id) REFERENCES user (id),
+  UNIQUE KEY user_booking (booking_date_id, user_id, pickup_date_id)
+) TYPE=INNODB;
+
+	
+DROP TABLE IF EXISTS booking;
+CREATE TABLE booking (
+  id int(10) unsigned NOT NULL auto_increment,
+  user_booking_id int(10) unsigned NOT NULL,
+/*  booking_date_id int(10) unsigned NOT NULL,
+  user_id int(10) unsigned NOT NULL,
+  pickup_date_id int(10) unsigned NOT NULL,
+  */
   product_id int(10) unsigned NOT NULL,
   quantity int(10) unsigned NOT NULL,
   tot_price decimal(10,2) NOT NULL default "0",
-  ModTime TIMESTAMP NOT NULL default CURRENT_TIMESTAMP,
+  timestamp TIMESTAMP NOT NULL default CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
-  FOREIGN KEY (booking_date_id) REFERENCES calendar (id),
-  FOREIGN KEY (user_id) REFERENCES user (id),
+  FOREIGN KEY user_booking_id REFERENCES user_booking (id)
+/*  FOREIGN KEY (user_id) REFERENCES user (id),
   FOREIGN KEY (pickup_date_id) REFERENCES calendar (id),
   FOREIGN KEY (product_id) REFERENCES product (id),
-  UNIQUE KEY booking (booking_date_id,user_id,pickup_date_id,product_id)
+  */
   ) TYPE=INNODB;
 
 /*
@@ -248,29 +268,5 @@ id	data ordine	utente	data ritiro	prodotto	quantità	tot (euro)
 3	3	2	3	1	2	2*costo prodotto
 */	
 	
-DROP TABLE IF EXISTS user_payment;
-CREATE TABLE user_payment (
-  id int(10) unsigned NOT NULL auto_increment,
-  booking_date_id int(10) unsigned NOT NULL,
-  user_id int(10) unsigned NOT NULL,
-  pickup_date_id int(10) unsigned NOT NULL,
-  date TIMESTAMP NOT NULL default CURRENT_TIMESTAMP,
-  owed decimal(10,2) NOT NULL, 
-  payed  decimal(10,2) NOT NULL,
-  debit_credit  decimal(10,2) NOT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (booking_date_id) REFERENCES calendar (id),
-  FOREIGN KEY (pickup_date_id) REFERENCES calendar (id),
-  FOREIGN KEY (user_id) REFERENCES user (id)
-) TYPE=INNODB;
-/*
-User_payments					
-id	user	data	dovuto	pagato	credito_debito
-1	2	1	20	19	-1
-2	2	3	30	35	5
-3	2	4	22	11	-11
-4	3	2	17	20	3
-*/
-
 
 EOF
