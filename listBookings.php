@@ -65,16 +65,17 @@ if(  !$connectedUser->isAdmin()){
 		
 	}else{
 
-		//setlocale(LC_ALL, 'it_IT');
+	setlocale(LC_ALL, 'it_IT');
 	
 		$listProducts = Product::listProducts($db, $log);
 		//$log->LogDebug($listProducts);
-		$listBooking  = bookingList::listBookings($db, $log);
+		$listaPrenotazioni  = bookingList::listBookings($db, $log);
 		echo "<div id='Content'>";
 		
 		$bookingArray = array();
-		foreach($listBooking as $uB){
+		foreach($listaPrenotazioni as $uB){
 			$singleUserB = array();
+			$singleUserB['uBid'] = $uB->id;
 			$singleUserB['user_id'] = $uB->user->id;
 			$singleUserB['user_name'] = $uB->user->name;
 			$singleUserB['user_surname'] = $uB->user->surname;
@@ -82,50 +83,61 @@ if(  !$connectedUser->isAdmin()){
 			$singleUserB['pickupday'] = $uB->pickup_date_id->day;
 			$singleUserB['owed'] = $uB->owed;
 			$singleUserB['paied'] = $uB->paied;
+			$singleUserB['changeback'] = $uB->changeback;
+			$singleUserB['total_cache'] = $uB->total_cache;
 			$singleUserB['debit'] = $uB->debit_credit;
-			
-			foreach ($uB->listBooking as $booking){
-				$singleUserB["id_".$booking->product_id->id] = $booking->quantity;
-				$singleUserB["unitprice_".$booking->product_id->id] = $booking->product_id->unitprice;
-				$singleUserB["price_".$booking->product_id->id] = $booking->tot_price;
+		
+			$num_book = count($uB->listBooking);	
+			foreach ($uB->listBooking as $k => $myb){
+				$singleUserB["p_".$myb->product_id->id] = $myb->quantity;
+				$singleUserB["unitprice_".$myb->product_id->id] = $myb->product_id->unitprice;
+				$singleUserB["price_".$myb->product_id->id] = $myb->tot_price;
 			}	
 
 				
 			$bookingArray[] = $singleUserB; 
+			$log->LogDebug($singleUserB);
+				
 		}
 		echo "<p> Qui di seguito tutte le prenotazioni dei gaabisti</p>\n";
                 echo "<table>";
-                echo "<tr><th class='vtext'>Booking</th><th class='vtext'>Gaabista</th><th class='vtext'>pickup</th>";
+                echo "<tr><th>Mod</th><th class='vtext'>BookingDate</th><th class='vtext'>Gaabista</th><th class='vtext'>PickupDate</th>";
                 foreach($listProducts as $p){
-                        echo "<th class='ncol'>$p->name ".($p->price>0? "($p->price &euro;)":"")."</th>";
+                        echo "<th class='ncol'>$p->name ".($p->unitprice==1? "($p->price &euro;)":"")."</th>";
                 }
 		echo "<th class='vtext'>dovuto</th>";
 		echo "<th class='vtext'>pagato</th>";
+		echo "<th class='vtext'>Resto</th>";
+		echo "<th class='vtext'>Totale Cassa</th>";
 		echo "<th class='vtext'>debito/credito</th>";
                 echo "</tr>\n";
 
                 $count = 0;
 		foreach($bookingArray as $v){
 			echo "<tr ".( ($count++ % 2 == 0)?"class='even'":"" ).">\n";
+			echo "<td><a href='bookingedit.php?id=".$v['uBid']."'>Edit</a> </td>";
 			echo "<td> ".strftime("%a %d %b %g", strtotime($v['bookingday']))."</td>";
 			echo "<td style='text-align:left;'> <a href='user.php?uId=".$v['user_id']."'>" .$v['user_surname']." ".$v['user_name']."</a></td>";
 			echo "<td> ".strftime("%a %d %b %g", strtotime($v['pickupday']))."</td>";
  			foreach($listProducts as $p){
-				switch($v["id_".$p->id]){
+				$key = 'unitprice_'.$p->id;
+				switch($v["$key"]){
 				case "1":
-				{echo "<td >" .$v["id_".$p->id]."</td>";}
+				{echo "<td >" .$v["p_".$p->id]."</td>";}
 				break;
 				case "0":
 				{echo "<td >" .$v["price_".$p->id]."&euro;</td>";}
 				break;
 				default:
-				echo "<td ></td>";
+				echo "<td></td>";
 				}
 		
 			}
 
 			echo "<td> ". number_format ($v['owed'], 2)." &euro;</td>";
 			echo "<td> ". number_format ($v['paied'], 2)." &euro;</td>";
+			echo "<td> ". number_format ($v['changeback'], 2)." &euro;</td>";
+			echo "<td> ". number_format ($v['total_cache'], 2)." &euro;</td>";
 			echo "<td> ". number_format ($v['debit'], 2)." &euro;</td>";
 			echo "</tr>\n";
 		

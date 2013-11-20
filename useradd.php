@@ -87,8 +87,8 @@ if($_POST['add']){
         		$user->loadInfo($last_id);
                         echo "<h2> Nuovo Gaabista inserito! Attendi l'aggiornamento</h2>";
 			echo "<script > 
-			setTimeout(function(){ window.location = 'user.php?uId=$last_id'; }, 2000);
-			</script>";
+		setTimeout(function(){ window.location = 'user.php?uId=$last_id'; }, 2000);
+		</script>";
 			
 	}else{
 		echo "<h2>Errore nella creazione del nuovo gaabista</h2>";

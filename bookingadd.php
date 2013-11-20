@@ -121,7 +121,7 @@ if($_POST['book']){
 	$founds .= "Total costs: ".$_POST['total_cost']."\n";
 	$founds .= "Total paied: ".$_POST['total_paied']."\n";
 	$founds .= "Resto: ".$_POST['return2user']."\n";
-	$founds .= "Totale cassa: ".$_POST['totale_cassa']."\n";
+	$founds .= "Totale cassa: ".$_POST['total_cache']."\n";
 	$founds .= "Debito/credito: ".$_POST['debito_credito']."\n";
 
 
@@ -132,7 +132,7 @@ if($_POST['book']){
 // first create a new userBooking
 	$itemsList = array();
 	$userBooking = new userBooking($db, $log);
-	$userBooking->newUserBooking($_POST['user_id'], $_POST['booking_date_id'], $_POST['pickup_date_id'],  $_POST['total_cost'], $_POST['total_paied'] - $_POST['return2user'], $_POST['debito_credito']);
+	$userBooking->newUserBooking($_POST['user_id'], $_POST['booking_date_id'], $_POST['pickup_date_id'],  $_POST['total_cost'], $_POST['total_paied'], $_POST['return2user'], $_POST['total_cache'], $_POST['debito_credito']);
 
 	foreach($pIds as $pId){
 		if($_POST["p_$pId"] >0 ){
@@ -153,14 +153,7 @@ if($_POST['book']){
 		}
 	}
 	$userBooking->addItems($itemsList);
-#	echo "<pre>
-#	";
-#	var_dump($listBooking);
-#	echo "</pre>";
-//	$dPaied = new DonationPaied($db, $log);
-//	$myB = $listBooking[0];
-//	$dPaied->newDonation($_POST['user_id'], $myB->user_id->donation->id, (($_POST['donation_first'] >0)?$_POST['donation_first']:null),(($_POST['donation_second'] >0)?$_POST['donation_second']:null),(($_POST['donation_third'] >0)?$_POST['donation_third']:null),(($_POST['donation_fourt'] >0)?$_POST['donation_fourth']:null));
-                  
+	
 	echo "<h2> Prenotazione inserita! Attendi l'aggiornamento</h2>";
 #	echo "<script > 
 #		setTimeout(function(){ window.location = 'listBookings.php'; }, 2000);
@@ -172,7 +165,7 @@ if($_POST['book']){
 //	}
 }else{
   
-	setlocale(LC_ALL, 'it_IT');
+	//setlocale(LC_ALL, 'it_IT');
  	$founds = "<pre>";
         $pIds = explode("_",$_POST['all_products_id']);
 	$founds .= "UserId: ".$_POST['user_id']."\n";
@@ -189,7 +182,7 @@ if($_POST['book']){
 	$founds .= "Total costs: ".$_POST['total_cost']."\n";
 	$founds .= "Total paied: ".$_POST['total_paied']."\n";
 	$founds .= "Resto: ".$_POST['return2user']."\n";
-	$founds .= "Totale cassa: ".$_POST['totale_cassa']."\n";
+	$founds .= "Totale cassa: ".$_POST['total_cache']."\n";
 	
  	$founds .= "</pre>";
 
@@ -336,8 +329,8 @@ if($_POST['book']){
                 <input type='text' class='tnumber' name='return2user' id='return2user'  value='0.00' />
                 </div>\n";
 	echo "<div class='row'>
-                <label for='total_cassa' >Totale cassa</label>
-                <input type='text' class='tnumber' name='total_cassa' id='total_cassa'  value='0.00' readonly='true'/>
+                <label for='total_cache' >Totale cassa</label>
+                <input type='text' class='tnumber' name='total_cache' id='total_cache'  value='0.00' readonly='true'/>
                 </div>\n";
 	echo "<div class='row'>
                 <label for='debito_credito' >Debito/Credito gaabista</label>
@@ -397,7 +390,7 @@ if($_POST['book']){
 		function calcolaCassa(){
                         var cassa = parseFloat($('#total_paied').val()) - parseFloat($('#return2user').val()) ;
                         cassa = cassa.toFixed(2);
-                        $('#total_cassa').val(cassa);
+                        $('#total_cache').val(cassa);
                 }
 	
 		function calcolaDebito(){

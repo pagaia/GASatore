@@ -29,7 +29,7 @@ $user->newUser('cristina', 'cristina', 'Cristina', 'Surname', 'tel', 'mobile', '
 $user2 = new User($db, $log);
 $user2->newUser('rmoro', 'rmoro', 'Remo', 'Moro', 'tel', 'mobile', 'remo.moro@mail.com', 'second email', 'address', 1002,0,1,1,null,1);
 $u3 = new User($db, $log);
-$u3->newUser('remo', 'remo', 'Remo', 'Moro', 'tel', 'mobile', 'remo@mail.com', 'second email', 'address', 1003,0,1,1,null,1);
+$u3->newUser('remo', 'remo', 'Remo2', 'Moro', 'tel', 'mobile', 'remo@mail.com', 'second email', 'address', 1003,0,1,1,null,1);
 
 //add Product category
 $category = array();

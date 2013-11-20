@@ -1,15 +1,15 @@
 #!/bin/bash
 
-DB=""
-if [[ $# != 1 ]];
-then
-        echo "Please pass the DB name"
-        exit 0
-else
-        DB=$1
-fi
+DB="gasatore"
+#if [[ $# != 1 ]];
+#then
+#        echo "Please pass the DB name"
+#        exit 0
+#else
+#        DB=$1
+#fi
 
-mysql -u gaabe -pgaabe  << EOF
+mysql -u gaabe -pgaabe  $DB << EOF
 
 DROP DATABASE IF EXISTS $DB;
 CREATE DATABASE $DB;
@@ -231,6 +231,8 @@ CREATE TABLE user_booking (
   timestamp TIMESTAMP NOT NULL default CURRENT_TIMESTAMP,
   owed decimal(10,2) NOT NULL default 0,
   paied  decimal(10,2) NOT NULL default 0,
+  changeback  decimal(10,2) NOT NULL default 0,
+  total_cache  decimal(10,2) NOT NULL default 0,
   debit_credit  decimal(10,2) NOT NULL default 0,
   PRIMARY KEY (id),
   FOREIGN KEY (booking_date_id) REFERENCES calendar (id),
@@ -244,29 +246,13 @@ DROP TABLE IF EXISTS booking;
 CREATE TABLE booking (
   id int(10) unsigned NOT NULL auto_increment,
   user_booking_id int(10) unsigned NOT NULL,
-/*  booking_date_id int(10) unsigned NOT NULL,
-  user_id int(10) unsigned NOT NULL,
-  pickup_date_id int(10) unsigned NOT NULL,
-  */
   product_id int(10) unsigned NOT NULL,
   quantity int(10) unsigned NOT NULL,
   tot_price decimal(10,2) NOT NULL default "0",
   timestamp TIMESTAMP NOT NULL default CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
-  FOREIGN KEY user_booking_id REFERENCES user_booking (id)
-/*  FOREIGN KEY (user_id) REFERENCES user (id),
-  FOREIGN KEY (pickup_date_id) REFERENCES calendar (id),
-  FOREIGN KEY (product_id) REFERENCES product (id),
-  */
+  FOREIGN KEY (user_booking_id) REFERENCES user_booking (id)
   ) TYPE=INNODB;
 
-/*
-booking					
-id	data ordine	utente	data ritiro	prodotto	quantità	tot (euro)
-1	2	1	3	1	3	3*costo prodotto
-2	3	1	3	3	1	1*costo prodotto
-3	3	2	3	1	2	2*costo prodotto
-*/	
-	
 
 EOF
