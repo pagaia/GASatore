@@ -65,7 +65,7 @@ if(  !$connectedUser->isAdmin()){
 		
 	}else{
 
-	setlocale(LC_ALL, 'it_IT');
+		setlocale(LC_ALL, 'it_IT');
 	
 		$listProducts = Product::listProducts($db, $log);
 		//$log->LogDebug($listProducts);

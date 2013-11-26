@@ -1,0 +1,9 @@
+- check all page variables
+- change username with mail
+- on update user set a userid variable to check the email change
+- Add notify column for notifications
+- separate the bookinglist in booking goods and cache paied
+- Add a logo for the GAS 
+- Add information on booking page for quotas and entrance fee
+- Add function to check the return2user amount
+- Add filter text on search users, booking, products

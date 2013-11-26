@@ -1,0 +1,251 @@
+2013-11-26 13:30:47 - ERROR --> An exception was thrown in ThisFunction() 
+2013-11-26 13:30:48 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-11-26 13:30:48 - DEBUG --> User: adding user cristina, cristina, Cristina, Surname, tel, mobile, cristina@email.it, second email, address, 1001, 0, 1, 1, 2  
+2013-11-26 13:30:48 - DEBUG --> User: added user Cristina  
+2013-11-26 13:30:48 - INFO  --> SELECT * FROM user where id=1 ORDER BY name 
+2013-11-26 13:30:48 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 13:30:48 - DEBUG --> Donation Paid by: INSERT INTO donation_paied (user_id, first, second, third, fourth)  values (1, 0.000000, 0.000000, 0.000000, 0.000000) 
+2013-11-26 13:30:48 - INFO  --> SELECT * FROM user where id=1 ORDER BY name 
+2013-11-26 13:30:48 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 13:30:48 - DEBUG --> User: adding user rmoro, rmoro, Remo, Moro, tel, mobile, remo.moro@mail.com, second email, address, 1002, 0, 1, 1, 1  
+2013-11-26 13:30:48 - DEBUG --> User: added user Remo  
+2013-11-26 13:30:48 - INFO  --> SELECT * FROM user where id=2 ORDER BY name 
+2013-11-26 13:30:48 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 13:30:48 - DEBUG --> Donation Paid by: INSERT INTO donation_paied (user_id, first, second, third, fourth)  values (2, 0.000000, 0.000000, 0.000000, 0.000000) 
+2013-11-26 13:30:48 - INFO  --> SELECT * FROM user where id=2 ORDER BY name 
+2013-11-26 13:30:48 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 13:30:48 - DEBUG --> User: adding user remo, remo, Remo2, Moro, tel, mobile, remo@mail.com, second email, address, 1003, 0, 1, 1, 1  
+2013-11-26 13:30:48 - DEBUG --> User: added user Remo2  
+2013-11-26 13:30:48 - INFO  --> SELECT * FROM user where id=3 ORDER BY name 
+2013-11-26 13:30:48 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 13:30:48 - DEBUG --> Donation Paid by: INSERT INTO donation_paied (user_id, first, second, third, fourth)  values (3, 0.000000, 0.000000, 0.000000, 0.000000) 
+2013-11-26 13:30:48 - INFO  --> SELECT * FROM user where id=3 ORDER BY name 
+2013-11-26 13:30:48 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Sportina piccola', 'Sportina da 5kg', 1, 8.500000, 0, 1) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Sportina GRANDE', 'Sportina da 10kg', 1, 17.000000, 0, 1) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Carne', 'Carne', 3, 1.000000, 0, 0) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Pane 4 cereali', 'Pane 4 cereali', 4, 4.050000, 0, 1) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Pane integrale', 'Pane integrale', 4, 4.050000, 0, 1) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Pane bianco', 'Pane bianco', 4, 4.050000, 0, 1) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Yogurt piccolo', 'Yogurt piccolo', 5, 2.000000, 0, 1) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Yogurt medio', 'Yogurt medio', 5, 3.000000, 0, 1) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Yogurt grande', 'Yogurt Grande', 5, 4.000000, 0, 1) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Pesche', 'Pesche', 6, 4.000000, 1, 1) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Uova da 4', 'Uova da 4', 7, 2.000000, 0, 1) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Uova da 6', 'Uova da 6', 7, 4.000000, 0, 1) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Quota ingresso', 'Quota di ingresso 5 euro', 2, 1.000000, 0, 0) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Restituzione', 'Resituisco al gaabista dei soldi', 3, 1.000000, 0, 0) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Altri prodotti', 'Altri prodotti venduti', 3, 1.000000, 0, 0) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Fuori sporta', 'Frutta e verdura fuori sporta', 3, 1.000000, 0, 0) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Prima quota trim.', 'Prima quota trimestrale', 2, 1.000000, 0, 0) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Seconda quota trim.', 'Seconda quota trimestrale', 2, 1.000000, 0, 0) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Terza quota trim.', 'Terza quota trimestrale', 2, 1.000000, 0, 0) 
+2013-11-26 13:30:48 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice) 
+	values ('Quarta quota trim.', 'Quarta quota trimestrale', 2, 1.000000, 0, 0) 
+2013-11-26 13:30:48 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-11-26 13:30:48 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-11-26 13:30:48 - INFO  --> [{"id":"1","status":"iscritto","description":null}] 
+2013-11-26 13:30:48 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null}] 
+2013-11-26 13:30:48 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null},{"id":"3","status":"cancellato","description":null}] 
+2013-11-26 13:30:48 - INFO  --> SELECT * FROM user where id=2 ORDER BY name 
+2013-11-26 13:30:48 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 13:30:48 - DEBUG --> [{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@mail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-26 13:30:48 - INFO  --> SELECT * FROM user where id=3 ORDER BY name 
+2013-11-26 13:30:48 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 13:30:48 - DEBUG --> [{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@mail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","username":"remo","password":"remo","name":"Remo2","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-26 13:30:48 - INFO  --> SELECT * FROM user where id=1 ORDER BY name 
+2013-11-26 13:30:48 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 13:30:48 - DEBUG --> [{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@mail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","username":"remo","password":"remo","name":"Remo2","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Surname","tel":"tel","mobile":"mobile","email":"cristina@email.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-26 22:15:13 - ERROR --> An exception was thrown in ThisFunction() 
+2013-11-26 22:15:13 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-11-26 22:15:13 - DEBUG --> User: adding user cristina, cristina, Cristina, Surname, tel, mobile, cristina@email.it, second email, address, 1001, 0, 1, 1, 2  
+2013-11-26 22:15:13 - DEBUG --> User: added user Cristina  
+2013-11-26 22:15:13 - INFO  --> SELECT * FROM user where id=1 ORDER BY name 
+2013-11-26 22:15:13 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:15:13 - DEBUG --> Donation Paid by: INSERT INTO donation_paied (user_id, first, second, third, fourth)  values (1, 0.000000, 0.000000, 0.000000, 0.000000) 
+2013-11-26 22:15:13 - INFO  --> SELECT * FROM user where id=1 ORDER BY name 
+2013-11-26 22:15:13 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:15:13 - DEBUG --> User: adding user rmoro, rmoro, Remo, Moro, tel, mobile, remo.moro@mail.com, second email, address, 1002, 0, 1, 1, 1  
+2013-11-26 22:15:13 - DEBUG --> User: added user Remo  
+2013-11-26 22:15:13 - INFO  --> SELECT * FROM user where id=2 ORDER BY name 
+2013-11-26 22:15:13 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:15:13 - DEBUG --> Donation Paid by: INSERT INTO donation_paied (user_id, first, second, third, fourth)  values (2, 0.000000, 0.000000, 0.000000, 0.000000) 
+2013-11-26 22:15:13 - INFO  --> SELECT * FROM user where id=2 ORDER BY name 
+2013-11-26 22:15:13 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:15:13 - DEBUG --> User: adding user remo, remo, Remo2, Moro, tel, mobile, remo@mail.com, second email, address, 1003, 0, 1, 1, 2  
+2013-11-26 22:15:13 - DEBUG --> User: added user Remo2  
+2013-11-26 22:15:13 - INFO  --> SELECT * FROM user where id=3 ORDER BY name 
+2013-11-26 22:15:13 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:15:13 - DEBUG --> Donation Paid by: INSERT INTO donation_paied (user_id, first, second, third, fourth)  values (3, 0.000000, 0.000000, 0.000000, 0.000000) 
+2013-11-26 22:15:13 - INFO  --> SELECT * FROM user where id=3 ORDER BY name 
+2013-11-26 22:15:13 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:15:13 - DEBUG --> User: adding user giovanni, bruno, giovanni, Bruno, tel, mobile, giovanni@mail.com, second email, address, 1003, 0, 1, 1, 2  
+2013-11-26 22:15:13 - DEBUG --> User: added user giovanni  
+2013-11-26 22:15:13 - INFO  --> SELECT * FROM user where id=4 ORDER BY name 
+2013-11-26 22:15:13 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:15:13 - DEBUG --> Donation Paid by: INSERT INTO donation_paied (user_id, first, second, third, fourth)  values (4, 0.000000, 0.000000, 0.000000, 0.000000) 
+2013-11-26 22:15:13 - INFO  --> SELECT * FROM user where id=4 ORDER BY name 
+2013-11-26 22:15:13 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Quota ingresso', 'Quota di ingresso 5 euro', 2, 1.000000, 0, 0, 0) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Prima quota trim.', 'Prima quota trimestrale', 2, 1.000000, 0, 0, 0) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Seconda quota trim.', 'Seconda quota trimestrale', 2, 1.000000, 0, 0, 0) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Terza quota trim.', 'Terza quota trimestrale', 2, 1.000000, 0, 0, 0) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Quarta quota trim.', 'Quarta quota trimestrale', 2, 1.000000, 0, 0, 0) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Sportina piccola', 'Sportina da 5kg', 1, 8.500000, 0, 1, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Sportina GRANDE', 'Sportina da 10kg', 1, 17.000000, 0, 1, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Carne', 'Carne', 3, 1.000000, 0, 0, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Pane 4 cereali', 'Pane 4 cereali', 4, 4.050000, 0, 1, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Pane integrale', 'Pane integrale', 4, 4.050000, 0, 1, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Pane bianco', 'Pane bianco', 4, 4.050000, 0, 1, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Yogurt piccolo', 'Yogurt piccolo', 5, 2.000000, 0, 1, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Yogurt medio', 'Yogurt medio', 5, 3.000000, 0, 1, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Yogurt grande', 'Yogurt Grande', 5, 4.000000, 0, 1, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Pesche', 'Pesche', 6, 4.000000, 1, 1, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Uova da 4', 'Uova da 4', 7, 2.000000, 0, 1, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Uova da 6', 'Uova da 6', 7, 4.000000, 0, 1, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Restituzione', 'Resituisco al gaabista dei soldi', 3, 1.000000, 0, 0, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Altri prodotti', 'Altri prodotti venduti', 3, 1.000000, 0, 0, 1) 
+2013-11-26 22:15:13 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Fuori sporta', 'Frutta e verdura fuori sporta', 3, 1.000000, 0, 0, 1) 
+2013-11-26 22:15:14 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-11-26 22:15:14 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-11-26 22:15:14 - INFO  --> [{"id":"1","status":"iscritto","description":null}] 
+2013-11-26 22:15:14 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null}] 
+2013-11-26 22:15:14 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null},{"id":"3","status":"cancellato","description":null}] 
+2013-11-26 22:15:14 - INFO  --> SELECT * FROM user where id=4 ORDER BY name 
+2013-11-26 22:15:14 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:15:14 - DEBUG --> [{"id":"4","username":"giovanni","password":"bruno","name":"giovanni","surname":"Bruno","tel":"tel","mobile":"mobile","email":"giovanni@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-26 22:15:14 - INFO  --> SELECT * FROM user where id=2 ORDER BY name 
+2013-11-26 22:15:14 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:15:14 - DEBUG --> [{"id":"4","username":"giovanni","password":"bruno","name":"giovanni","surname":"Bruno","tel":"tel","mobile":"mobile","email":"giovanni@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@mail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-26 22:15:14 - INFO  --> SELECT * FROM user where id=3 ORDER BY name 
+2013-11-26 22:15:14 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:15:14 - DEBUG --> [{"id":"4","username":"giovanni","password":"bruno","name":"giovanni","surname":"Bruno","tel":"tel","mobile":"mobile","email":"giovanni@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@mail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","username":"remo","password":"remo","name":"Remo2","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-26 22:15:14 - INFO  --> SELECT * FROM user where id=1 ORDER BY name 
+2013-11-26 22:15:14 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:15:14 - DEBUG --> [{"id":"4","username":"giovanni","password":"bruno","name":"giovanni","surname":"Bruno","tel":"tel","mobile":"mobile","email":"giovanni@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@mail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","username":"remo","password":"remo","name":"Remo2","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Surname","tel":"tel","mobile":"mobile","email":"cristina@email.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-26 22:46:18 - ERROR --> An exception was thrown in ThisFunction() 
+2013-11-26 22:46:18 - INFO  --> Internal Query Time: 131313 milliseconds 
+2013-11-26 22:46:18 - DEBUG --> User: adding user cristina, cristina, Cristina, Surname, tel, mobile, cristina@email.it, second email, address, 1001, 0, 1, 1, 2  
+2013-11-26 22:46:18 - DEBUG --> User: added user Cristina  
+2013-11-26 22:46:18 - INFO  --> SELECT * FROM user where id=1 ORDER BY name 
+2013-11-26 22:46:18 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:46:18 - DEBUG --> Donation Paid by: INSERT INTO donation_paied (user_id, first, second, third, fourth)  values (1, 0.000000, 0.000000, 0.000000, 0.000000) 
+2013-11-26 22:46:18 - INFO  --> SELECT * FROM user where id=1 ORDER BY name 
+2013-11-26 22:46:18 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:46:18 - DEBUG --> User: adding user rmoro, rmoro, Remo, Moro, tel, mobile, remo.moro@mail.com, second email, address, 1002, 0, 1, 1, 1  
+2013-11-26 22:46:18 - DEBUG --> User: added user Remo  
+2013-11-26 22:46:18 - INFO  --> SELECT * FROM user where id=2 ORDER BY name 
+2013-11-26 22:46:18 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:46:18 - DEBUG --> Donation Paid by: INSERT INTO donation_paied (user_id, first, second, third, fourth)  values (2, 0.000000, 0.000000, 0.000000, 0.000000) 
+2013-11-26 22:46:18 - INFO  --> SELECT * FROM user where id=2 ORDER BY name 
+2013-11-26 22:46:18 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:46:18 - DEBUG --> User: adding user remo, remo, Remo2, Moro, tel, mobile, remo@mail.com, second email, address, 1003, 0, 1, 1, 2  
+2013-11-26 22:46:18 - DEBUG --> User: added user Remo2  
+2013-11-26 22:46:18 - INFO  --> SELECT * FROM user where id=3 ORDER BY name 
+2013-11-26 22:46:18 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:46:18 - DEBUG --> Donation Paid by: INSERT INTO donation_paied (user_id, first, second, third, fourth)  values (3, 0.000000, 0.000000, 0.000000, 0.000000) 
+2013-11-26 22:46:18 - INFO  --> SELECT * FROM user where id=3 ORDER BY name 
+2013-11-26 22:46:18 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:46:18 - DEBUG --> User: adding user giovanni, bruno, giovanni, Bruno, tel, mobile, giovanni@mail.com, second email, address, 1003, 0, 1, 1, 2  
+2013-11-26 22:46:18 - DEBUG --> User: added user giovanni  
+2013-11-26 22:46:18 - INFO  --> SELECT * FROM user where id=4 ORDER BY name 
+2013-11-26 22:46:18 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:46:18 - DEBUG --> Donation Paid by: INSERT INTO donation_paied (user_id, first, second, third, fourth)  values (4, 0.000000, 0.000000, 0.000000, 0.000000) 
+2013-11-26 22:46:18 - INFO  --> SELECT * FROM user where id=4 ORDER BY name 
+2013-11-26 22:46:18 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Quota ingresso', 'Quota di ingresso 5 euro', 1, 1.000000, 0, 0, 0) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Prima quota trim.', 'Prima quota trimestrale', 1, 1.000000, 0, 0, 0) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Seconda quota trim.', 'Seconda quota trimestrale', 1, 1.000000, 0, 0, 0) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Terza quota trim.', 'Terza quota trimestrale', 1, 1.000000, 0, 0, 0) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Quarta quota trim.', 'Quarta quota trimestrale', 1, 1.000000, 0, 0, 0) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Sportina piccola', 'Sportina da 5kg', 2, 8.500000, 0, 1, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Sportina GRANDE', 'Sportina da 10kg', 2, 17.000000, 0, 1, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Carne', 'Carne', 3, 1.000000, 0, 0, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Pane 4 cereali', 'Pane 4 cereali', 4, 4.050000, 0, 1, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Pane integrale', 'Pane integrale', 4, 4.050000, 0, 1, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Pane bianco', 'Pane bianco', 4, 4.050000, 0, 1, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Yogurt piccolo', 'Yogurt piccolo', 5, 2.000000, 0, 1, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Yogurt medio', 'Yogurt medio', 5, 3.000000, 0, 1, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Yogurt grande', 'Yogurt Grande', 5, 4.000000, 0, 1, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Pesche', 'Pesche', 6, 4.000000, 1, 1, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Uova da 4', 'Uova da 4', 7, 2.000000, 0, 1, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Uova da 6', 'Uova da 6', 7, 4.000000, 0, 1, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Restituzione', 'Resituisco al gaabista dei soldi', 3, 1.000000, 0, 0, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Altri prodotti', 'Altri prodotti venduti', 3, 1.000000, 0, 0, 1) 
+2013-11-26 22:46:18 - DEBUG --> newProduct: INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('Fuori sporta', 'Frutta e verdura fuori sporta', 3, 1.000000, 0, 0, 1) 
+2013-11-26 22:46:18 - DEBUG --> {"id":"1","name":"admin","description":"role with administratio rights"} 
+2013-11-26 22:46:18 - DEBUG --> {"id":"2","name":"user","description":"role with normal user rights"} 
+2013-11-26 22:46:18 - INFO  --> [{"id":"1","status":"iscritto","description":null}] 
+2013-11-26 22:46:18 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null}] 
+2013-11-26 22:46:18 - INFO  --> [{"id":"1","status":"iscritto","description":null},{"id":"2","status":"sospeso","description":null},{"id":"3","status":"cancellato","description":null}] 
+2013-11-26 22:46:18 - INFO  --> SELECT * FROM user where id=4 ORDER BY name 
+2013-11-26 22:46:18 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:46:18 - DEBUG --> [{"id":"4","username":"giovanni","password":"bruno","name":"giovanni","surname":"Bruno","tel":"tel","mobile":"mobile","email":"giovanni@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-26 22:46:18 - INFO  --> SELECT * FROM user where id=2 ORDER BY name 
+2013-11-26 22:46:18 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:46:18 - DEBUG --> [{"id":"4","username":"giovanni","password":"bruno","name":"giovanni","surname":"Bruno","tel":"tel","mobile":"mobile","email":"giovanni@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@mail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-26 22:46:18 - INFO  --> SELECT * FROM user where id=3 ORDER BY name 
+2013-11-26 22:46:18 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:46:18 - DEBUG --> [{"id":"4","username":"giovanni","password":"bruno","name":"giovanni","surname":"Bruno","tel":"tel","mobile":"mobile","email":"giovanni@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@mail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","username":"remo","password":"remo","name":"Remo2","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 
+2013-11-26 22:46:18 - INFO  --> SELECT * FROM user where id=1 ORDER BY name 
+2013-11-26 22:46:18 - DEBUG --> DonationType Query: SELECT * FROM donation_type where id=1 ORDER BY id 
+2013-11-26 22:46:18 - DEBUG --> [{"id":"4","username":"giovanni","password":"bruno","name":"giovanni","surname":"Bruno","tel":"tel","mobile":"mobile","email":"giovanni@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"2","username":"rmoro","password":"rmoro","name":"Remo","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo.moro@mail.com","email2":"second email","address":"address","tesseraCasale":"1002","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"1","name":"admin","description":"role with administratio rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"3","username":"remo","password":"remo","name":"Remo2","surname":"Moro","tel":"tel","mobile":"mobile","email":"remo@mail.com","email2":"second email","address":"address","tesseraCasale":"1003","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},{"id":"1","username":"cristina","password":"cristina","name":"Cristina","surname":"Surname","tel":"tel","mobile":"mobile","email":"cristina@email.it","email2":"second email","address":"address","tesseraCasale":"1001","entrance_fee":"0","subscription_date":"2013-11-26","role":{"id":"2","name":"user","description":"role with normal user rights","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"status":{"id":"1","status":"iscritto","description":null,"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"donation":{"id":"1","type":"ridotta","Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null},"Log_Status":3,"DateFormat":"Y-m-d G:i:s","MessageQueue":null}] 

@@ -26,8 +26,8 @@ switch($_GET['element']){
         break;
 
 	case "donationpaied":
-	$dPaied = new donationPaied($db, $log, null, $_GET['value']);	
-	echo json_encode($dPaied);
+        $donation_amount = User::getDonationbyUserId($db, $log, $_GET['value']);
+	echo json_encode($donation_amount);
 	break;
 	
 	default:

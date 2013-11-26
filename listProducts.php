@@ -31,7 +31,7 @@ if(  !$connectedUser->isAdmin()){
 
  		echo "<table><tr><th><input type='checkbox' name='userAll' value='Select all' onclick='javascript:selectAll(this, \"userid[]\");'/></th>
 		<th>Nome</th><th>Descrizione</th><th>Categoria</th><th>Prezzo</th><th>Disponibile</th>\n";
-		$listProducts =  Product::listProducts($db, $log);
+		$listProducts =  Product::listProducts($db, $log, null, null, 1);
 
                 $count = count($listProducts);
                 for ($i = 0; $i < $count; $i++) {

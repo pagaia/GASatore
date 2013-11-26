@@ -622,6 +622,26 @@ class User extends base{
  }
 
 
+  public static function getDonationbyUserId($db, $log, $uId){
+        $result = array();
+ 
+	if($db) {
+#		$q = "select u.name, ub.user_id ,u.surname,  p.name, sum(tot_price) as tot from user_booking ub join user u on u.id=ub.user_id join  booking b on b.user_booking_id=ub.id join product p on p.id=b.product_id where b.product_id=".$quota_id." and u.id=$uId group by ub.user_id";
+		$q = "select u.name, ub.user_id ,  p.name, p.id as pId,  sum(tot_price) as tot from user_booking ub join user u on u.id=ub.user_id join  booking b on b.user_booking_id=ub.id join product p on p.id=b.product_id where b.product_id < 6  and u.id=$uId group by ub.user_id, pId order by pId";
+	$log->logDebug(" getDonationbyUserId : $q");
+        $a = $db->fetch_all_array($q);
+
+        if (!empty($a)) {
+	   foreach ($a as $k => $v) {
+               $result["p".$v['pId']] = $v['tot'];
+	   }
+        }else {
+                return false;
+        }
+ 	}
+
+	return $result;
+}
 
  public function __destructor (){
         echo 'The class "', __CLASS__, '" was destroyed.<br />'; 
@@ -733,6 +753,7 @@ class Product extends base{
  public $unitprice; // if true (1) the product have a unit price otherwise not
  public $disable;
  public $description;
+ public $visible;
  
 
  public function __construct($db, $log, $id = null)  {  
@@ -757,6 +778,7 @@ class Product extends base{
 			$this->category = new productCategory($this->_db, $this->log,$v['category_id']);
 	 		$this->description = $v['description'];
 			$this->disable = $v['disable'];
+			$this->visible = $v['visible'];
 	  	  }
 
  		}
@@ -765,10 +787,10 @@ class Product extends base{
 	}
 }
 
- public function newProduct($name, $description, $category_id, $price, $disable = 0, $unitprice = 1){
-	$q = sprintf("INSERT INTO product (name, description, category_id , price, disable, unitprice) 
-	values ('%s', '%s', %d, %f, %d, %d)", 
-	$name, addslashes($description), $category_id, $price, $disable, $unitprice);
+ public function newProduct($name, $description, $category_id, $price, $disable = 0, $unitprice = 1, $visible = 1){
+	$q = sprintf("INSERT INTO product (name, description, category_id , price, disable, unitprice, visible) 
+	values ('%s', '%s', %d, %f, %d, %d, %d)", 
+	$name, addslashes($description), $category_id, $price, $disable, $unitprice, $visible);
 	
 	$this->log->logDebug("newProduct: $q");
 	if($this->_db->query($q)){
@@ -802,7 +824,7 @@ class Product extends base{
 	return Product::listProducts($db, $log, 0, 1);
  }
 
- public static function listProducts($db, $log, $active = null, $unitprice = null){
+ public static function listProducts($db, $log, $active = null, $unitprice = null, $visible = null){
         $result= array();
 
         if($db) {
@@ -813,6 +835,9 @@ class Product extends base{
 		}
 		if(!is_null($unitprice ) ){
 			$where .= "unitprice=$unitprice and ";
+		}
+		if(!is_null($visible) ){
+			$where .= "visible=$visible and ";
 		}
 		if(strlen($where) > 7){
 			$q .= substr($where,0, strlen($where)-4);
@@ -1026,7 +1051,8 @@ class bookingList extends base{
 			$q = substr($q, 0, strlen($q)-4);
                 }
 		
-		$q .= " GROUP BY user_id, booking_date_id, pickup_date_id ORDER by booking_date_id, pickup_date_id,user_id";
+//		$q .= " GROUP BY user_id, booking_date_id, pickup_date_id ORDER by booking_date_id, pickup_date_id,user_id";
+		$q .= " ORDER by id";
 	
         }
         $log->logDebug("ListBooking: $q");
@@ -1213,7 +1239,7 @@ class userBooking extends base{
  public function update($user_id, $booking_date_id, $pickup_date_id, $owed, $paied, $changeback, $total_cache, $debitCredit){
 	$this->log->logDebug("userBooking -> Update params: $user_id, $booking_date_id, $pickup_date_id, $owed, $paied, $changeback, $total_cache, $debitCredit");
        if($this->id){
-                $q = sprintf("update user_booking set user_id=%d, booking_date_id=%d, pickup_date_id=%d, owed=%f, paied=%f, changeback=%f, total_cache=%f, debit_credit=%f where id=%d",
+                $q = sprintf("update user_booking set user_id=%d, booking_date_id=%d, pickup_date_id=%d, owed=%f, paied=%f, changeback=%f, total_cache=%f, debit_credit=%f , timestamp=now() where id=%d",
                 $user_id, $booking_date_id, $pickup_date_id, $owed, $paied, $changeback, $total_cache, $debitCredit, $this->id);
                 $this->log->logDebug("userBooking -> Update $q");
                 $this->_db->query($q);

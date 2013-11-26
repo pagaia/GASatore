@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<?php echo "<title>".PROJECT." ".VERSION." - View Monthly Report</title>\n"; ?>
+<?php echo "<title>".PROJECT." ".VERSION." - User edit</title>\n"; ?>
 <style type="text/css" media="all">@import "files/main.css";</style>
  <script type='text/javascript' src='files/jquery-1.3.2.min.js'></script> 
 <!-- <script type='text/javascript' src='files/jquery-1.10.2.js'></script> -->

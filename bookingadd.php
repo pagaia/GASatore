@@ -78,11 +78,17 @@ checkValue($("#email2"),$("#email2check"));
 	        $("#user_id").change(function() {
 			var userId = this.options[this.selectedIndex].value;
 			$.getJSON( "ajaxf.php", "element=donationpaied&value="+userId, function( data ) {
-				$("#donation_first").val(data.first);
+				if(data.p1){ $("#donation_1").val(data.p1);} else{$("#donation_1").val('0.00');}
+                                if(data.p2){ $("#donation_2").val(data.p2);} else{$("#donation_2").val('0.00');}
+                                if(data.p3){ $("#donation_3").val(data.p3);} else{$("#donation_3").val('0.00');}
+				if(data.p4){ $("#donation_4").val(data.p4);} else{$("#donation_4").val('0.00');}
+                                if(data.p5){ $("#donation_5").val(data.p5);} else{$("#donation_5").val('0.00');}
+
+				/*$("#donation_first").val(data.first);
 				$("#donation_second").val(data.second);
 				$("#donation_third").val(data.third);
 				$("#donation_fourth").val(data.fourth);
-				
+				*/
 			});
 });
 
@@ -231,7 +237,7 @@ if($_POST['book']){
 
 	echo "</fieldset>";
 
-/* DONATION PARAGRAPH */
+/* DONATION PARAGRAPH 
 	echo "<fieldset>
 	<legend>Donazioni</legend>";
 //	$donationPaied = new donationPaied($db, $log, null, 1 );
@@ -270,7 +276,7 @@ if($_POST['book']){
  	echo "<input type='text' class='tnumber red' name='pay_donation'  id='pay_donation' value='0.00'/>\n";
         echo "</div>";
 	echo "</fieldset>\n";
-
+*/
 	
 
 	$categories = productCategory::listCategory($db, $log);
@@ -285,16 +291,24 @@ if($_POST['book']){
 				echo "<span class='header'>Quantità</span>
 				<span class='header'>Prezzo unitario</span>\n";
 			}
-			echo "	<span class='header'>Totale per prodotto</span>
-			</div>\n";
+			echo "	<span class='header'>Totale per prodotto</span>\n";
+
+			if($productsList[0]->id < 6){
+				echo "<span class='header'>Totale pagato</span>";
+			}
+			echo "</div>\n";
 			foreach($productsList as $product){
 			      if(!$product->unitprice){ 	
 				echo "<div class='row'>
 				<label for='pv_$product->id'>$product->name</label>
 				<input type='hidden' class='tnumber' name='pv_$product->id' id='pv_$product->id' value='1'/>
-				<input type='text' class='tnumber' name='tprice_$product->id' id='tprice_$product->id'  value='0.00' />
-				<span id='p_{$product->id}checker'>checker</span>
-				</div>\n";
+				<input type='text' class='tnumber' name='tprice_$product->id' id='tprice_$product->id'  value='0.00' />	\n";
+				if($product->id < 6){
+                                        echo "<input type='text' class='tnumber red' name='donation_$product->id' id='donation_$product->id' value='0.00' disabled=true/>";
+                                }
+
+				echo "<span id='p_{$product->id}checker'>checker</span>";
+				echo "</div>\n";
 				}else{
 				echo "<div class='row'>
 				<label for='p_$product->id'>$product->name</label>
@@ -368,7 +382,7 @@ if($_POST['book']){
 
 	       function sumCost(){
                         $total_cost     
-			sumDonation();
+	//		sumDonation();
 			tot = tot + newDonation;
                         tot = tot.toFixed(2);
                         $('#total_cost').val( tot);
